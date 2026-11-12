@@ -4,6 +4,8 @@
 
 ### Newly added source materials — 2026-11-13
 
+- [原始智慧停車 AI Agent 提案 DOCX](docs/submission/智慧停車AI_Agent_Proposal_新北市(1).docx) — user-provided 11-page New Taipei proposal, including the original A–F abstract, Introduction, Related Work, 5/3/10, pseudocode, evaluation and references. Preserved as uploaded, not replaced with a rewritten version.
+
 - [Uploaded original DESIGN.md](DESIGN.md) — supplied **after** the initial OpenSpec refactor; its primary deployed scope is the **Taichung information-only Agent**, while New Taipei is used for historical offline forecasting research. The design itself reports New Taipei phase-2 Persistence MAE **0.326757** as the strongest overall baseline, while New Taipei production inference and Taichung future predictions are **not validated/enabled**. Those figures have **not been independently reproduced in this repository**.
 - [智慧停車提案解析.pdf](docs/submission/智慧停車提案解析.pdf) — original four-page proposal-analysis PDF provided for class submission.
 - [Source scope reconciliation](docs/refactor/SOURCE_SCOPE_RECONCILIATION.md) — explains how the uploaded design relates to the previously New Taipei-oriented research proposal.
@@ -26,7 +28,7 @@
 | Before / After mapping | [BEFORE_AFTER.md](docs/refactor/BEFORE_AFTER.md) | README-based comparison |
 | Acceptance and outstanding blockers | [ACCEPTANCE.md](docs/refactor/ACCEPTANCE.md) | Manual documentary audit; CLI NOT RUN |
 
-**Scope restriction:** Original DOCX/PPTX, raw datasets and notebooks are **not present in this GitHub repository**; a standalone DESIGN.md was added later, after the initial document refactor, so their exact pre/post comparison and experiment reproducibility are still blocked. The originally submitted PDF/PNG are separate LMS attachments; no requirement to duplicate them in this repository has been established. The remainder of this README preserves the previous proposal outline.
+**Scope restriction:** Original PPTX, raw datasets and notebooks are **not present in this GitHub repository**; the original proposal DOCX was added after the first academic refactor; a standalone DESIGN.md was added later, after the initial document refactor, so their exact pre/post comparison and experiment reproducibility are still blocked. The originally submitted PDF/PNG are separate LMS attachments; no requirement to duplicate them in this repository has been established. The remainder of this README preserves the previous proposal outline.
 
 ---
 
