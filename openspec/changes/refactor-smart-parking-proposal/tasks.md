@@ -47,3 +47,16 @@
 - [x] Commit the original presentation binary without modifying slide content.
 - [x] Add a README source link and Acceptance record of 16-slide proposal content and its historical status.
 - [ ] Independently execute any required CLI/data tests (NOT RUN; unrelated to source upload).
+
+## 8. Manual verification without CLI — 2026-11-13
+
+- [x] Trace Proposal → Specs → Design → Tasks → Apply → Verify to committed files.
+- [x] Inspect **9 OpenSpec Requirements and 9 Scenarios**; each scenario has WHEN/THEN and each requirement has SHALL.
+- [x] Verify source artifacts and their unchanged Git object SHAs (DOCX, PPTX, PDF, DESIGN.md, pre-refactor README).
+- [x] Count five mindsets, three controversies and ten deep questions; confirm nine original paper/dataset identifiers [5]–[13].
+- [x] Check 94 Markdown local relative links against initial GitHub tree: 0 missing files; external URLs not retested for reachability.
+- [x] Publish [OPENSPEC_MANUAL_VERIFICATION.md](../../../docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md) with one row per spec scenario, evidence and boundary.
+- [ ] Run native OpenSpec CLI (NOT RUN by design in this GitHub-only session).
+- [ ] Independently reproduce New Taipei Phase 2 purged split and H1–H3 (BLOCKED: source/test environment missing in this repository).
+
+**Document scenario coverage = 9/9 (100%) of written requirements manually evidenced. This does NOT establish CLI PASS, empirical success, or formal teacher acceptance.**

@@ -22,6 +22,7 @@
 | 原稿／重構對照 | [BEFORE_AFTER.md](docs/refactor/BEFORE_AFTER.md) | **PASS 章節層級對照** |
 | 臺中／新北階段與證據歸屬 | [SOURCE_SCOPE_RECONCILIATION.md](docs/refactor/SOURCE_SCOPE_RECONCILIATION.md) | **PASS** |
 | 完整驗收報告 | [ACCEPTANCE.md](docs/refactor/ACCEPTANCE.md) | **文件 PASS；實驗／CLI NOT RUN** |
+| **OpenSpec 人工驗收逐項證據** | [OPENSPEC_MANUAL_VERIFICATION.md](docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md) | **9/9 文件情境人工核對；CLI NOT RUN** |
 
 ## 2. 完整保留的原始文件
 
@@ -71,3 +72,7 @@ GitHub 上含 OpenSpec 設定、Codex／Copilot Skills 及本次 `refactor-smart
 3. [查看驗收報告](docs/refactor/ACCEPTANCE.md)，保留 PASS/PARTIAL/BLOCKED/NOT RUN 與可行的後續工作。
 
 **原則：Evidence first · Abstain when uncertain · Do not claim a result without the matching experiment.**
+
+## 6. 本次人工規格驗證（不執行 CLI）
+
+[完整人工 OpenSpec 驗證逐項紀錄](docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md) 核對 9 個 Requirement、9 個 Scenario、5/3/10、原始 DOCX/PPTX/PDF/DESIGN.md、94 個本地相對連結（0 個失效），以及 Proposal → Specs → Design → Tasks → Apply → Verify 的文件證據。**9/9 只代表文件 Requirement 的人工檢查覆蓋率**，不是模型通過率或官方 OpenSpec 驗證。`openspec validate` 仍為 **NOT RUN**，H1–H3 的完整可重現驗證尚未完成。
