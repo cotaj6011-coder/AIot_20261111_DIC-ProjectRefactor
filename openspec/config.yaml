@@ -1,0 +1,18 @@
+schema: spec-driven
+context: |
+  Project: 智慧停車 AI Agent (DIC3-Project Proposal Refactor).
+  Scope: Proposal, Introduction, Related Work, and traceable documentation first.
+  Core research question: arrival-time roadside parking availability and risk-aware Top-k recommendation.
+  Data focus: New Taipei City roadside parking JSONL and proposed real-time API.
+  Preserve provenance and distinguish Implemented, Evaluated, Planned, Blocked.
+  Do not invent model results, external evidence, citations, or claim SFpark effects were achieved by this project.
+  Use Traditional Chinese for assignment documentation unless an artifact explicitly requires IEEE-style English.
+rules:
+  proposal:
+    - State why the change is needed, what is in/out of scope, and how success will be checked.
+  specs:
+    - Use testable requirements and scenarios; distinguish document requirements from software features.
+  design:
+    - Justify academic and evidence decisions; maintain citations and before/after traceability.
+  tasks:
+    - Use checkboxes; check off only what has actually been completed and verified.
