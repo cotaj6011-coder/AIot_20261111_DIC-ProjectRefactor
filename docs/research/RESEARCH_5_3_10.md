@@ -1,6 +1,6 @@
 # DIC3 Deep Research — A–F, 5 Mindsets, 3 Controversies, 10 Questions
 
-**Source baseline:** Original [11-page proposal DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) §3.1–3.3. All source categories retain the original instructor-facing structure. Updated with later-design facts and testable decisions; not a claim that the original assignment PDF was itself rewritten.
+**Source baseline:** Original [11-page proposal DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) §3.1–3.3. The analysis retains the proposal's research categories and relates each item to a testable decision.
 
 ## A–F argument structure
 

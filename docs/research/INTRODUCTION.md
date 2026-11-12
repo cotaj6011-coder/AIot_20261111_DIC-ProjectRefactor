@@ -1,8 +1,8 @@
-# I. INTRODUCTION — Source-Aligned Refactor
+# I. INTRODUCTION
 
 **Working title:** *An Uncertainty-Aware AI Agent for Arrival-Time Parking Availability Prediction and Risk-Aware Recommendation*
 
-> **Document state: Refactored proposal.** The research target is **New Taipei City roadside parking segments** as in the original 11-page DOCX (§1.1–§1.6). The separately supplied `DESIGN.md` (§§10–15) describes an **offline New Taipei forecasting comparison** and a distinct **Taichung current-information Agent implementation**. Results stated in that design document are source-reported; the referenced dataset, checkpoints, test logs and PHASE reports are not available for reproduction within this GitHub repository.
+**Scope:** This research proposal concerns New Taipei roadside parking arrival-time recommendation. New Taipei offline model evidence and Taichung's information-only Agent are reported separately in [Source Scope](../refactor/SOURCE_SCOPE_RECONCILIATION.md). Results from the source design are not independently reproduced in this repository.
 
 ## A. Motivation and setting
 
@@ -24,7 +24,7 @@ This framing follows the original DOCX §1.2, §1.5 and the Agent/pseudocode in 
 
 Three gaps are relevant but must not be conflated:
 
-1. **Project data-evidence gap:** The original proposal DOCX reports New Taipei JSONL availability and an early sample-notebook MAE of approximately 7.12 spaces. The standalone design, produced at a later stage, reports a large New Taipei offline comparison, but this repository does not contain the data or full technical reports to reproduce either. Therefore this gap concerns **verifiable evidence in this repository**, not the absence of New Taipei data in the world.
+1. **Project data-evidence gap:** The original proposal DOCX reports New Taipei JSONL availability and an early sample-notebook MAE of approximately 7.12 spaces. The project design also reports a large New Taipei offline comparison, but this repository does not contain the data or full technical reports to reproduce either. Therefore this gap concerns **verifiable evidence in this repository**, not the absence of New Taipei data in the world.
 2. **Decision-evaluation gap:** Existing publications study prediction horizons, models, occupancy dynamics and uncertainty [5]–[11]. The **project-specific question** is whether forecasting quality and calibrated full-occupancy risk improve *arrival-time Top-k recommendations under walking constraints* beyond straightforward distance and persistence baselines.
 3. **Agent-failure gap:** The proposed integration of source selection, quality gates, bounded Retry/Replan, fallback and abstention requires comparison with a **fixed pipeline using the same tools**. Agent use alone is not a novel algorithm or an automatically demonstrated improvement. Digital-twin decision-support integration also exists in prior work [12].
 
@@ -32,7 +32,7 @@ The resulting contribution, if supported by empirical tests, would be an **audit
 
 ## D. Research questions and hypotheses
 
-**H1 — Prediction superiority.** Under matched +30/+60-minute forecasting targets, and a leakage-controlled chronological split, do Random Forest or HistGradientBoosting features improve MAE by the prespecified minimum over Persistence? The later `DESIGN.md` §10 **reports the opposite on aggregate New Taipei offline test rows** (Persistence MAE 0.326757 versus RF 0.402669, HistGB 0.537539; same 9,178,935 test rows). This **does not support H1's superiority claim on the source-reported aggregate comparison**; H1 must not be called validated or passed. The dataset/run is not independently reproduced in this repository. Horizon/segment/subgroup results should be examined without cherry-picking.
+**H1 — Prediction superiority.** Under matched +30/+60-minute forecasting targets, and a leakage-controlled chronological split, do Random Forest or HistGradientBoosting features improve MAE by the prespecified minimum over Persistence? The `DESIGN.md` §10 **reports the opposite on aggregate New Taipei offline test rows** (Persistence MAE 0.326757 versus RF 0.402669, HistGB 0.537539; same 9,178,935 test rows). This **does not support H1's superiority claim on the source-reported aggregate comparison**; H1 must not be called validated or passed. The dataset/run is not independently reproduced in this repository. Horizon/segment/subgroup results should be examined without cherry-picking.
 
 **H2 — User-oriented ranking.** Can risk-aware Top-3 selection increase the probability that at least one recommended segment is non-full at arrival, compared with distance-only ranking **at matched walking distance and accepted-request coverage**? Use a prespecified arrival-ground-truth tolerance, calibrated-risk diagnostics, Brier/ECE/PR-AUC, selective coverage and abstention measures. **Not evaluated here.**
 

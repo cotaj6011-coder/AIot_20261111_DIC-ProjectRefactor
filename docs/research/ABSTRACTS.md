@@ -1,6 +1,6 @@
-# Refactored A–F Abstracts — New Taipei Proposal
+# A–F Abstracts — New Taipei Research Proposal
 
-> Newly authored academic proposal summaries derived from the original DOCX, the later DESIGN.md and the paper audit. **Not** a claim that the LMS already received this revised text. Keep historical sample and Phase 2 results separate.
+**Scope:** These abstracts describe the proposed New Taipei roadside study, using the original proposal and DESIGN.md as sources. Sample and Phase 2 results are reported as distinct experiments.
 
 ## 中文摘要（約 300 字；A–F 對應）
 
@@ -27,4 +27,4 @@
 
 **Important:** The two MAEs come from **different source-described experiments** and must not be compared as if they used a matched test set. The 0.3268 value is a regression MAE in parking spaces, **not** a parking-success probability. SFpark percentages are excluded from Findings because they are external policy outcomes.
 
-The formal word/character requirement is not independently verified from LMS; target ~300 Chinese characters is based on class demonstration, not an enforced journal limit.
+The Chinese abstract follows the approximate short-summary length used in class; final submission length is subject to course instructions.

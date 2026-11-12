@@ -1,6 +1,6 @@
-# II. RELATED WORK — Original DOCX-Aligned Critical Review
+# II. RELATED WORK
 
-> Refactor source: user-provided 11-page New Taipei proposal DOCX §2.1–§2.2 and References [5]–[13], cross-checked against its 5/3/10 §3 and standalone `DESIGN.md`. Previous revision used only a partial paper subset; this version **preserves all nine original entries**. Links and source-confidence appear in [REFERENCE_AUDIT.md](../references/REFERENCE_AUDIT.md).
+**Source basis:** Original proposal DOCX §2.1–§2.2 and references [5]–[13], with [DESIGN.md](../../DESIGN.md) for research-stage context. The nine original references are preserved in the comparison below.
 
 ## A. Domain knowledge and forecasting baselines
 

@@ -1,40 +1,22 @@
-# Primary Source and Scope Reconciliation — Reviewed 2026-11-13
+# 研究資料與系統範圍對照
 
-## Source hierarchy and document types
+原始 [新北市提案 DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx)、[PPTX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx)、[DESIGN.md](../../DESIGN.md) 與 [提案解析 PDF](../submission/智慧停車提案解析.pdf) 對應不同研究與設計階段。下表明確界定各成果，避免跨城市誤用。
 
-| File | Source type | What it proves | What it does not |
+| 階段 | 城市／資料 | 來源記載的成果 | 證據限制 |
 | --- | --- | --- | --- |
-| [Original New Taipei DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) | **Primary submitted proposal, 11 pages** | Original A–F, §1 Introduction, §2 Related Work, §3 5/3/10, §4 Agent, §5–7 QA/evaluation/status, original [5]–[13] references | Does not by itself prove all proposed experiments completed |
-| [Original DESIGN.md](../../DESIGN.md) | **Design and subsequent progress narrative** | States separate Taichung Agent implementation and New Taipei Phase 2/2.5 offline evaluation results, timeline and limitations | Cannot verify missing code, trained models or test logs |
-| [Original proposal analysis PDF](../submission/智慧停車提案解析.pdf) | **Prior analysis / infographic source, 4 pages** | Records proposal diagnostic, chart mapping and preliminary states at time created | Earlier analysis should not override later actual DESIGN results or prove completed experiments |
-| [README before OpenSpec](../baseline/README_BEFORE.md) | **Snapshot of repository's initial summary** | Audit trail for what earlier ChatGPT refactor actually used | Not a substitute for original DOCX and DESIGN |
-| [OpenSpec change](../../openspec/changes/refactor-smart-parking-proposal/proposal.md) | **Planning and audit artifact** | Requirements, design choices, tasks and documentary changes | Not native CLI validation or empirical proof |
+| 提案與早期 Notebook | **新北市路邊** | 抽樣 MAE 約 7.12；研究抵達時間可用性與 Top-k 風險推薦 | 抽樣實驗不能直接代表全量結果 |
+| Phase 2 離線比較 | **新北市路邊** | `DESIGN.md` 記載共用 9,178,935 個測試觀測；Persistence MAE 0.326757、RF 0.402669、HistGB 0.537539 | 原始資料及完整實驗產物未包含在此 Repo，無法獨立重現 |
+| Phase 2.5 品質評估 | **新北市路邊** | 記載名義切分邊界的 future label 跨界與大量車位不變情形 | 正式評估應採 purged split；不得宣稱生產模型 READY |
+| Phase 3–4.6 | **臺中路邊／路外即時資訊** | `DESIGN.md` 記載資訊型 Agent、品質閘門、GIS 與排程 | 相關程式與執行紀錄不在此 Repo；未來預測仍為 **DISABLED** |
+| 資料品質原型 | **Birmingham 停車場** | 公開資料品質檢查與基準方法參考 | 不可將路外停車場結果直接外推新北路邊 |
+| H2／H3 研究 | **新北市抵達時間推薦** | 規劃風險感知 Top-k、Agent-vs-Pipeline 比較 | **Planned／Not Evaluated** |
 
-## City and phase separation
+## 研究假設與數據解讀
 
-| Stage | Geographic target | Artifact evidence | Methodological conclusion |
-| --- | --- | --- | --- |
-| Proposal and early notebook | **New Taipei roadside** | Original DOCX §5.1 | Reports sample MAE ~7.12, segment ID not in sample model. **Not comparable** to later Phase 2 metrics. |
-| Phase 2 offline | **New Taipei roadside** | DESIGN.md §10 | Source-reported 9,178,935 common test observations and persistence MAE 0.326757 outperforming RF 0.402669 and HistGB 0.537539 on aggregate. **No underlying run in this repo**. |
-| Phase 2.5 critique | **New Taipei roadside** | DESIGN.md §11 | Unchanged-target prevalence and nominal split-boundary target crossing; trust is conditional. No production model ready. |
-| Phase 3–4.6 | **Taichung current-information Agent** | DESIGN.md §§12–15 | Agent, snapshots, GIS/scheduling and failure-handling described as implemented elsewhere. Forecasting DISABLED. |
-| Proposed arrival-time risk-aware service | **New Taipei roadside** | Original DOCX §§1,4,6 | H2/H3 and deployment of future-arrival Top-k remain planned; cannot borrow Taichung's current-information status as proof. |
-| QA comparison | **Birmingham off-street garages** | Original DOCX §5.3 / UCI | External dataset and QA methodology, not a Taiwan roadside benchmark. |
+- **H1：**原設計記載的 Phase 2 整體離線結果以 Persistence 最佳，不支持「樹模型必然較佳」的推論；尚待可重現且修正標籤切分邊界後的測試。
+- **H2：**Top-3 Success、校準與選擇性推薦效果尚未完成正式驗證。
+- **H3：**Agent 在 timeout、stale、schema error 情境相對固定 Pipeline 的實際增益尚未正式比較。
+- **MAE 約 7.12 與 0.326757** 為不同實驗設定；不可當成同樣資料上的改善幅度。
+- 原始提案與後續設計記載不同階段，**來源差異應以階段標示**，不更改原始檔案內容。
 
-## Conflicting historical status texts
-
-- The first README and DOCX say New Taipei full QA/model evidence is still planned. Subsequent DESIGN.md reports offline Phase 2/2.5 having been performed elsewhere. **Resolve by naming provenance and stage**, not deleting historical wording or saying the two documents are identical.
-- Original proposal H1 predicted a tree-model advantage. The subsequent report gives Persistence the aggregate MAE lead. **H1 is unsupported on these source-reported aggregate tests**; no claim of an independent statistical rejection without raw rows or uncertainty estimates.
-- Taichung's **information-only** Agent has no validated future occupancy model. Roadside observed count, off-street signal, estimated direct-line distance, and unknown fields retain separate evidence labels.
-- The experiment's **nominal boundary crossing** is a documented methodological limitation. Even when the source states no test leakage, next evaluation must purge target windows crossing splits; do not claim fully leakage-free cross-validation solely from nominal 60/20/20.
-- Original PDF infographic's planned/implemented labels were created before full source reconciliation; do not silently rewrite the immutable PDF.
-
-## After-review follow-up
-
-**Completed now:** Source files linked; research chapters rewritten based on exact DOCX §1–§2 and DESIGN §§9–15; all original nine bibliographic entries audited and reconciled; before/after map and evidence statuses updated.
-
-**Still blocked/not run:** Actual model logs/full JSONL/PHASE reports absent here; no native `openspec validate`; original PPTX optional/not in GitHub, no explicit Git duplication requirement established; LMS formal requirements not independently inspected.
-
-## Source preservation
-
-The source DOCX, PDF, DESIGN.md and baseline README are kept as historical inputs. No original data/model reports were invented or copied from other cities.
+本文件是研究範圍及證據邊界的正式說明，不將來源記載的外部實作或實驗視為本儲存庫可重現的結果。

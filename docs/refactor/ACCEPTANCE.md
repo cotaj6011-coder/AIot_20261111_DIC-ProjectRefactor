@@ -1,79 +1,41 @@
-# Comprehensive Acceptance Audit — DIC3 OpenSpec Proposal Refactor
+# DIC3 OpenSpec 文件驗收報告
 
-**Audit date:** 2026-11-13. **Source base:** Original 11-page New Taipei DOCX (pp.2–11; §§1–7, refs [5]–[13]); standalone DESIGN.md (§§9–15); original New Taipei 16-slide PPTX; uploaded four-page proposal-analysis PDF; initial README snapshot at commit `f060df0569667769c9053b7affe87265cfeb415f`. **Validation mode:** documentary GitHub Connector read/compare + targeted publisher/dataset web checks. No formal grading, native OpenSpec CLI or model execution.
+## 驗收範圍
 
-## Status vocabulary
+本報告依原始 [DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx)、[PPTX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx)、[PDF](../submission/智慧停車提案解析.pdf)、[DESIGN.md](../../DESIGN.md) 與 OpenSpec 規格，檢查研究提案重構文件的完整性和一致性。
 
-- **PASS** — Requested documentary evidence exists and the named check is independently inspectable in this repository or publisher page.
-- **PARTIAL** — A meaningful deliverable exists but evidence, comparability or a subtask remains incomplete.
-- **FAIL** — Contradiction or broken/document-schema requirement observed; corrected cases listed below.
-- **BLOCKED** — Material supporting source or required execution environment absent.
-- **NOT RUN** — A specific operation has not been executed; do not convert this to a PASS.
+**結果：文件層級人工驗收 PASS（9/9 Requirements 具對應證據）。** 詳細逐項驗證方法與文件位置列於 [OPENSPEC_MANUAL_VERIFICATION.md](OPENSPEC_MANUAL_VERIFICATION.md)。此結果不代表原生 CLI 或模型實驗通過。
 
-## Requirement compliance matrix
+## 作業交付驗收
 
-| Topic | Evidence | Manual assessment | Residual issue |
-| --- | --- | --- | --- |
-| Source inventory and immutable originals | [DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx), [DESIGN](../../DESIGN.md), [PDF](../submission/智慧停車提案解析.pdf), [PPTX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx), [baseline README](../baseline/README_BEFORE.md) | **PASS** | PPTX uploaded as immutable proposal source; teacher requirement to duplicate it in Git remains unconfirmed |
-| OpenSpec proposal / design / tasks | [Change](../../openspec/changes/refactor-smart-parking-proposal/proposal.md), [Design](../../openspec/changes/refactor-smart-parking-proposal/design.md), [Tasks](../../openspec/changes/refactor-smart-parking-proposal/tasks.md) | **PASS (file structure and content)** | Actual CLI NOT RUN |
-| OpenSpec delta-spec structure | [spec.md](../../openspec/changes/refactor-smart-parking-proposal/specs/research-proposal-refactor/spec.md) | **PASS (manually checked `## ADDED Requirements`, `### Requirement`, `#### Scenario`)** | Formal CLI validation NOT RUN |
-| A–F research story | [ABSTRACTS](../research/ABSTRACTS.md) / [5/3/10](../research/RESEARCH_5_3_10.md) | **PASS** | Final LMS text may be older; not resubmitted |
-| 5 core + 3 controversies + 10 deep questions | [RESEARCH_5_3_10](../research/RESEARCH_5_3_10.md) | **PASS (counts and original DOCX §3 alignment)** | Not an experimental finding |
-| Introduction | [INTRODUCTION](../research/INTRODUCTION.md), original DOCX §1 | **PASS (source-based refactor)** | Contribution still proposed |
-| Related Work | [RELATED_WORK](../research/RELATED_WORK.md), DOCX §2 / [5]–[13] | **PASS (9/9 included)** | Not all papers reproduced statistically |
-| Citation metadata / DOI | [REFERENCE_AUDIT](../references/REFERENCE_AUDIT.md) | **PASS (9/9 metadata/abstract or publisher overview)** | Method-specific numeric claims not verified by replication |
-| Taichung / New Taipei boundary | [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) / DESIGN §§9–15 | **PASS** | Underlying external code not in repo |
-| H1 evidence-state accuracy | [INTRODUCTION](../research/INTRODUCTION.md) §D / DESIGN §10 | **PASS (correctly disclosed source-reported aggregate baseline advantage)** | Reported results not independently rerun |
-| 60/20/20 cutoff and purge | [OpenSpec Design](../../openspec/changes/refactor-smart-parking-proposal/design.md), DESIGN §11 | **PASS (correct proposed protocol)** | Corrected experiment NOT RUN |
-| H2 risk calibration / Top-3 benefit | Original DOCX §6 / [INTRODUCTION](../research/INTRODUCTION.md) | **PARTIAL (test plan)** | **BLOCKED: no model/arrival ground truth** |
-| H3 Agent vs fixed Pipeline | Original DOCX §6.5 / [INTRODUCTION](../research/INTRODUCTION.md) | **PARTIAL (test plan)** | **NOT RUN** fault-injection evaluation |
-| README links and audit record | [README](../../README.md), [BEFORE_AFTER](BEFORE_AFTER.md) | **PASS (link audit to be confirmed after commit)** | Check final remote tree |
-| LMS submission and grading | Teacher transcript guidance / current repo | **BLOCKED (formal platform requirements not accessible here)** | Do not infer attachments must be duplicated |
-| OpenSpec CLI / program tests | Remote GitHub Connector only | **NOT RUN** | Requires execution environment, repo not executable study package |
+| 項目 | 結果 | 佐證 |
+| --- | --- | --- |
+| 原始 DOCX／PPTX／PDF／DESIGN.md 保留 | **PASS** | [README 原稿清單](../../README.md) |
+| OpenSpec Proposal／Specs／Design／Tasks | **PASS（文件）** | [OpenSpec Change](../../openspec/changes/refactor-smart-parking-proposal/proposal.md) |
+| A–F 與中英文摘要 | **PASS** | [ABSTRACTS](../research/ABSTRACTS.md) |
+| 五大思維／三爭議／十深問 | **PASS** | [5/3/10](../research/RESEARCH_5_3_10.md) |
+| Introduction 學術重構 | **PASS** | [INTRODUCTION](../research/INTRODUCTION.md) |
+| Related Work 原稿九篇 [5]–[13] | **PASS（書目／研究主題對照）** | [RELATED_WORK](../research/RELATED_WORK.md) · [REFERENCE_AUDIT](../references/REFERENCE_AUDIT.md) |
+| 原稿 Before／After、城市範圍 | **PASS（章節級）** | [BEFORE_AFTER](BEFORE_AFTER.md) · [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) |
+| Spec Requirement／Scenario 人工驗證 | **PASS（9/9 文件情境）** | [MANUAL VERIFICATION](OPENSPEC_MANUAL_VERIFICATION.md) |
+| 原生 `openspec validate` | **NOT RUN** | 無官方 CLI 執行紀錄 |
+| H1 purged-split 模型實驗 | **PARTIAL／BLOCKED** | `DESIGN.md` 有離線報告數值，缺本 Repo 可重現的完整資料與執行紀錄 |
+| H2 Top-3 與 H3 Agent-vs-Pipeline | **PLANNED／NOT RUN** | 僅有研究設計與評估方案 |
+| 課程平台正式繳交驗證 | **BLOCKED** | 無課程平台提交狀態證據 |
 
-## Material findings and corrective disposition
+## 研究可信度檢核
 
-| ID | Severity | Before (finding) | Fix / verification |
-| --- | --- | --- | --- |
-| F-01 | **CRITICAL** | Original DOCX and DESIGN source unavailable when earlier academic rewrite produced | Sources now committed; real DOCX §1/§2 comparison in [BEFORE_AFTER](BEFORE_AFTER.md), rewritten [Intro](../research/INTRODUCTION.md) and [Related Work](../research/RELATED_WORK.md) |
-| F-02 | **HIGH** | Blanket language suggested New Taipei offline experiments not performed | Distinguish DESIGN-source-reported offline 9,178,935 test rows from no **in-repo reproduction**; [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) |
-| F-03 | **HIGH** | Original H1 tree-model superiority at risk of implied success | Aggregate source report favors Persistence; H1 **not supported by that comparison**; independently unverified |
-| F-04 | **HIGH** | Prior Related Work covered only a selected subset | 9/9 original references [5]–[13] compared and linked to publisher/dataset sources |
-| F-05 | **HIGH** | Prior OpenSpec delta-spec headings `## REQ-01`/`### Scenario` not official parse format | Rewritten with `## ADDED Requirements`, `### Requirement:`, `#### Scenario:`, explicit SHALL/WHEN/THEN |
-| F-06 | **HIGH** | Taichung implemented informational Agent could be mistaken for New Taipei predictive deployment | Separate cities/stages explicitly across Introduction, Abstracts, Scope and README |
-| F-07 | **MEDIUM** | 60/20/20 nominal chronology could be called leakage-free despite crossing future targets | Explicit purged boundary protocol; original Phase 2 results tagged conditional trust |
-| F-08 | **MEDIUM** | SFpark 43%/30% could be attributed to this Agent | Constrained to external policy/context with official source |
-| F-09 | **MEDIUM** | README and Change still stated original DOCX/DESIGN absent after upload | Updated chronology and primary-source links |
-| F-10 | **MEDIUM** | Distinct MAEs 7.12 versus 0.3268 could be compared as model improvement | Explicit non-matched experiment distinction |
-| F-11 | **MEDIUM** | Existing DESIGN.md references code/report paths absent from this repository | Preserve source unchanged, state only source-reported executable progress |
-| F-12 | **LOW** | Duplicate PDF/PNG GitHub upload might be perceived as mandatory | README distinguishes LMS and GitHub preservation; formal rule not verified |
+- **H1：**原設計記載新北 Phase 2 整體離線 MAE：Persistence 0.326757、Random Forest 0.402669、HistGB 0.537539。結果不支持樹模型在該整體比較中優於 Persistence；因名義切分邊界有 future label 越界紀錄，正式結論需重驗。
+- **H2／H3：**仍是待驗證的研究假設，不以文件 PASS 取代實驗結果。
+- **城市範圍：**新北市為預測研究，臺中為資訊型 Agent；臺中未來預測仍為 DISABLED。
+- **文獻：**原稿 [5]–[13] 九項來源有書目及方法對照，但沒有重現其論文實驗。
+- **資料品質：**抽樣 MAE 約 7.12 與 Phase 2 的 0.326757 屬不同實驗，不作直接優劣比較。
 
-## Artifact versus science acceptance
+## 待完成的真實事項
 
-**Document refactor (requested GitHub work): PASS for source-aligned structure, coverage and traceability, subject to final remote verification.**  
-**Native OpenSpec CLI: NOT RUN.**  
-**External bibliography: 9/9 bibliographic/abstract records checked; primary-paper experimental replication NOT RUN.**  
-**Source-reported Phase 2: EVALUATED ELSEWHERE, NOT REPRODUCED in this repo; production readiness NOT ESTABLISHED.**  
-**H2/H3 and arrival-time New Taipei ranking: PLANNED / NOT RUN.**
+1. 執行原生 OpenSpec CLI（**NOT RUN**；僅當正式作業需要 CLI 證據時）。
+2. 提供新北 Phase 2 資料與執行紀錄，修正跨切分標籤問題並重跑 H1。
+3. 實測 H2 的風險校準／抵達 Top-3 成效與 H3 的故障注入比較。
+4. 依 iLearning 實際規範確認正式繳交狀態。
 
-## Remaining risks / blockers
-
-1. **Original PPTX now preserved:** 16-slide New Taipei proposal in `docs/submission/` (77,376 bytes; SHA-256 `96cc9735035a3f0e57185e33fe0b18216fb1a5180c57d02c26009ec58bceb42b`). It reflects the earlier proposal status and does not constitute an independently verified later-stage experiment. No independently confirmed teacher requirement to duplicate it in Git has been established.
-2. No raw New Taipei JSONL, trained artifacts, `PHASE2_REPORT.md`, `PHASE3_REPORT.md`, local test suite, runtime, or fixed-pipeline-vs-Agent evidence in this documentation repository.
-3. The original submitted LMS abstracts/attachments may differ from this refactor; submission revisions must be performed separately and should not be invented.
-4. Native OpenSpec CLI validation and actual research tests are **NOT RUN**. Static document checks are not equivalent.
-
-## Remote repository link and structure verification
-
-At GitHub commit `ed12612fbcd171835b2a593dee866a462b8701f6`, the connector confirmed **31 files**, fetched **15** authored non-Skill Markdown documents, found **zero broken local relative Markdown links** after URL-decoding link paths, counted **nine requirement headers and nine scenario headers** in the OpenSpec delta spec, and confirmed **5 / 3 / 10** numbered research items. The original DOCX, PDF and DESIGN.md Git blob SHAs matched their pre-review values. This is a **static audit**, not an execution of the native OpenSpec CLI or research experiments.
-
-## Original proposal PPTX addition — 2026-11-13
-
-- **PASS — Original source preservation:** [智慧停車AI_Agent_Proposal_新北市(1).pptx](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx) was uploaded unchanged as a binary file; file size **77,376 bytes**, SHA-256 **`96cc9735035a3f0e57185e33fe0b18216fb1a5180c57d02c26009ec58bceb42b`**.
-- **PASS — Topic/slide inventory:** 16 slides contain introduction/problem and H1–H3, Related Work, 5/3/10, JSONL/data quality, Agent architecture/pseudocode, evaluation, go/no-go, prototype status and conclusion.
-- **PARTIAL — Version reconciliation:** The PPTX represents the original proposal and states New Taipei full-data QA/model training as planned at that stage; the later DESIGN.md describes separate offline Phase 2 evidence. Their chronology must remain explicit rather than rewriting the original slides.
-- **NOT RUN:** Native OpenSpec CLI validation and all research/model experiments. Adding the PPTX changes source completeness, not scientific acceptance.
-
-## Final manual OpenSpec verification — 2026-11-13
-
-The detailed per-Requirement and per-Scenario matrix is in [OPENSPEC_MANUAL_VERIFICATION.md](OPENSPEC_MANUAL_VERIFICATION.md). A GitHub Connector audit of initial head `6de065264bfe3470fb93274dc6c8a46ec7938c6d` located **32 blobs**, read **15 non-Skill authored Markdown files**, verified **94 local relative link destinations with 0 missing**, confirmed **9 Requirements / 9 Scenarios with WHEN/THEN**, and counted **5 mindsets / 3 controversies / 10 deep questions**. Original DOCX, PPTX, PDF, DESIGN.md and baseline README Git object SHAs were unchanged. Documentary scenario evidence: **9/9 PASS (manual static review)**. **Native OpenSpec CLI remains NOT RUN**; research tests and LMS grading verification remain NOT RUN/BLOCKED respectively. These qualifications take precedence over any earlier broad phrase suggesting scientific or CLI validation.
+**文件驗收結果：PASS；研究實驗及 CLI 驗證不在此 PASS 範圍。**

@@ -1,6 +1,6 @@
 # Reference Audit — Original DOCX [5]–[13]
 
-**Basis:** Original uploaded `docs/submission/智慧停車AI_Agent_Proposal_新北市(1).docx` p.10–11 References, pp.4–5 Article Summary. All nine references below were individually checked against publicly accessible publisher or dataset landing pages during this refactor. Audit of **metadata and abstract/preview claims** is distinct from independent replication of paper results, and restricted/full papers are not asserted to have been read in full.
+**Basis:** Original `docs/submission/智慧停車AI_Agent_Proposal_新北市(1).docx` p.10–11 References, pp.4–5 Article Summary. All nine references below were individually checked against publicly accessible publisher or dataset landing pages for this bibliography audit. Audit of **metadata and abstract/preview claims** is distinct from independent replication of paper results, and restricted/full papers are not asserted to have been read in full.
 
 ## Original nine sources (numbering preserved)
 

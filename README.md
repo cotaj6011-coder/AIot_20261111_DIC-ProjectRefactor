@@ -1,78 +1,53 @@
-# 智慧停車 AI Agent — DIC3 OpenSpec 提案重構
+# 智慧停車 AI Agent｜DIC3 OpenSpec 提案重構
 
 **研究主題：**新北市路邊停車抵達時間可用性預測與風險感知推薦  
-**課程：**物聯網應用與資料分析｜DIC3 Project Proposal Refactor using OpenSpec  
-**狀態：**研究提案文件已依 OpenSpec 規格進行來源對照與學術重構；**OpenSpec CLI 未執行、GitHub 內無可重現的完整預測實驗**。
+**作業：**DIC3 — Project Proposal Refactor using OpenSpec
 
-> **必讀的範圍區分：**原始 DOCX 聚焦**新北市路邊抵達時間預測**；後續 `DESIGN.md` 記錄**新北離線 Phase 2/2.5** 與另一個**臺中資訊型 Agent**。臺中 Agent 的未來預測為 **DISABLED**，不能稱為已完成新北抵達時間推薦部署。
+本儲存庫保存原始智慧停車提案與以 OpenSpec 規格驅動流程完成的學術文件重構，研究核心是從「目前有空位」提升到「抵達時是否可靠、風險多高、如何推薦」。
 
-## 1. 老師驗收導覽
+## 作業成果
 
-| 要求或證據 | GitHub 檔案 | 內容狀態 |
-| --- | --- | --- |
-| OpenSpec Proposal | [proposal.md](openspec/changes/refactor-smart-parking-proposal/proposal.md) | **PASS 文件** |
-| OpenSpec Delta Specs | [spec.md](openspec/changes/refactor-smart-parking-proposal/specs/research-proposal-refactor/spec.md) | **PASS 文件語法人工檢查** |
-| OpenSpec Design | [design.md](openspec/changes/refactor-smart-parking-proposal/design.md) | **PASS 文件** |
-| OpenSpec Tasks | [tasks.md](openspec/changes/refactor-smart-parking-proposal/tasks.md) | **PASS 追蹤，保留未完成項** |
-| A–F 與 5/3/10 | [RESEARCH_5_3_10.md](docs/research/RESEARCH_5_3_10.md) | **PASS** |
-| 約 300 字中文與 IEEE 英文摘要 | [ABSTRACTS.md](docs/research/ABSTRACTS.md) | **PASS 文件** |
-| 重構 Introduction | [INTRODUCTION.md](docs/research/INTRODUCTION.md) | **PASS 文件** |
-| 重構 Related Work（原稿九篇） | [RELATED_WORK.md](docs/research/RELATED_WORK.md) | **PASS 九篇比較** |
-| 參考文獻 DOI 與主張稽核 | [REFERENCE_AUDIT.md](docs/references/REFERENCE_AUDIT.md) | **9/9 出版資訊／摘要核對** |
-| 原稿／重構對照 | [BEFORE_AFTER.md](docs/refactor/BEFORE_AFTER.md) | **PASS 章節層級對照** |
-| 臺中／新北階段與證據歸屬 | [SOURCE_SCOPE_RECONCILIATION.md](docs/refactor/SOURCE_SCOPE_RECONCILIATION.md) | **PASS** |
-| 完整驗收報告 | [ACCEPTANCE.md](docs/refactor/ACCEPTANCE.md) | **文件 PASS；實驗／CLI NOT RUN** |
-| **OpenSpec 人工驗收逐項證據** | [OPENSPEC_MANUAL_VERIFICATION.md](docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md) | **9/9 文件情境人工核對；CLI NOT RUN** |
+| 核心成果 | 文件 |
+| --- | --- |
+| OpenSpec Change | [Proposal](openspec/changes/refactor-smart-parking-proposal/proposal.md) · [Specs](openspec/changes/refactor-smart-parking-proposal/specs/research-proposal-refactor/spec.md) · [Design](openspec/changes/refactor-smart-parking-proposal/design.md) · [Tasks](openspec/changes/refactor-smart-parking-proposal/tasks.md) |
+| A–F 學術摘要 | [中文與 IEEE 英文摘要](docs/research/ABSTRACTS.md) |
+| 五大核心思維／三項爭議／十大深問 | [研究分析](docs/research/RESEARCH_5_3_10.md) |
+| Introduction | [研究動機、缺口與 H1–H3](docs/research/INTRODUCTION.md) |
+| Related Work | [原始文獻 [5]–[13] 九項比較](docs/research/RELATED_WORK.md) |
+| 文獻查核 | [Reference Audit](docs/references/REFERENCE_AUDIT.md) |
+| 原稿與修訂章節對照 | [Before / After](docs/refactor/BEFORE_AFTER.md) |
+| 資料城市與階段定義 | [Source Scope](docs/refactor/SOURCE_SCOPE_RECONCILIATION.md) |
+| 驗收 | [Acceptance](docs/refactor/ACCEPTANCE.md) · [Manual Verification](docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md) |
 
-## 2. 完整保留的原始文件
+## 原始資料
 
-| 原始來源 | 位置 | 說明 |
-| --- | --- | --- |
-| **原始新北市提案 DOCX** | [智慧停車AI_Agent_Proposal_新北市(1).docx](docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) | 原稿含 A–F、Introduction、Related Work [5]–[13]、5/3/10、Agent、Evaluation |
-| **原始新北市提案 PPTX** | [智慧停車AI_Agent_Proposal_新北市(1).pptx](docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx) | 16 張原始簡報：動機、H1–H3、Related Work、5/3/10、架構、流程、評估、原型與狀態；保留原稿，不視為更新後實驗報告 |
-| **原始 DESIGN.md** | [DESIGN.md](DESIGN.md) | 記錄跨城市設計與後續離線／資訊 Agent 進度 |
-| **原始提案解析 PDF** | [智慧停車提案解析.pdf](docs/submission/智慧停車提案解析.pdf) | 四頁原始分析，內容不隨重構自動更新 |
-| **OpenSpec 前 README 快照** | [README_BEFORE.md](docs/baseline/README_BEFORE.md) | 保留早期提交版本，供比對 |
+| 檔案 | 用途 |
+| --- | --- |
+| [新北市提案 DOCX](docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) | 原始文字提案 |
+| [新北市提案 PPTX](docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx) | 原始 16 頁簡報 |
+| [智慧停車提案解析 PDF](docs/submission/智慧停車提案解析.pdf) | 原始提案分析 |
+| [DESIGN.md](DESIGN.md) | 系統設計及階段成果記錄 |
+| [README_BEFORE.md](docs/baseline/README_BEFORE.md) | 重構基準快照 |
 
-本次**不修改**以上原始來源；DOCX、PPTX 都是原始提案階段材料，內容若與後續 `DESIGN.md` 記錄的 Phase 2/2.5 進度不同，應以文件版本與時間區分，而非直接視為同一階段的結論。課堂系統已交的圖檔不必假定也須重複存入 GitHub；iLearning 正式規格未在本 Repo 獨立核驗。
+原始文件保留原貌；重構成果另存於 `docs/research/` 與 OpenSpec Change。
 
-## 3. 研究內容摘要與已知限制
+## 研究範圍與證據
 
-本研究欲回答：駕駛查詢路邊停車時，即便目前顯示有空位，**抵達時是否仍可用、風險多高、哪個 Top-k 路段值得優先前往？** 預計整合歷史 JSONL、資料品質閘門、時間對齊預測、風險排序、Agent tool selection、Retry/Replan、證據紀錄以及證據不足時的 Abstain。
+**新北市**是抵達時間預測及風險感知 Top-k 推薦的研究對象；**臺中**已有來源文件記載的資訊型 Agent，未來車位預測功能仍為 **DISABLED**；**Birmingham** 僅作為資料品質與方法參考。
 
-### 不能混為一談的兩個既有數值
+| 問題 | 目前證據 |
+| --- | --- |
+| H1：模型能否優於 Persistence？ | `DESIGN.md` 記載新北離線 Phase 2 整體 MAE：Persistence **0.326757**、Random Forest **0.402669**、HistGB **0.537539**。此結果**不支持樹模型在該整體比較中優於 Persistence**；需以修正跨切分標籤邊界後的實驗重新確認。 |
+| H2：風險排序能否提高抵達 Top-3 Success？ | **Planned／Not Evaluated** |
+| H3：Agent 能否在來源故障時優於固定 Pipeline？ | **Planned／Not Evaluated** |
 
-| 階段與來源 | 報告結果 | 可下的結論 |
-| --- | --- | --- |
-| **原始提案 DOCX 抽樣 Notebook** | MAE 約 **7.12 格** | 早期來源聲明，樣本／切分與模型細節未在此 Repo 重現 |
-| **DESIGN.md 新北 Phase 2 離線評估** | 相同 9,178,935 test rows：Persistence **0.326757**、RF **0.402669**、HistGB **0.537539** MAE | 原設計記錄的整體離線比較以 Persistence 最佳；**此 Repo 未重跑，且不代表新北預測系統可部署** |
+原始提案另記載抽樣 MAE 約 **7.12 格**，與 Phase 2 的資料、切分及特徵條件不同，不能直接比較。Phase 2 數據是原設計文件記載的離線成果，**本儲存庫未提供可獨立重跑的資料與執行紀錄**；不代表新北市正式預測服務已上線。
 
-後續 DESIGN §11 明列**名義切分邊界的 future labels 越界**、多數觀測不變與評估覆蓋條件等限制。因此後續要採 **purged chronological split** 修正，再依 H1–H3 重做可重現比較。
+## 驗收界線
 
-### H1–H3 狀態
+- **OpenSpec 文件流程：**Proposal → Specs → Design → Tasks → Apply → Manual Verify；九項文件 Requirement／Scenario 已有逐項證據。
+- **原生 OpenSpec CLI：**`openspec validate` **NOT RUN**；人工檢查不可視為官方 CLI 通過。
+- **研究結果：**H1 待可重現的 purged-split 驗證；H2/H3 尚未完成實驗。
+- **正式繳交：**以課程平台實際要求為準；本儲存庫不代表已完成課程平台上傳。
 
-- **H1（樹模型勝過 Persistence）：**DESIGN.md 所記載的整體離線比較**不支持**優越假設；尚待可重現、修正邊界的正式實驗。
-- **H2（風險感知 Top-3）：**沒有可在本 Repo 驗證的抵達成功率和校準結果，**Planned / NOT RUN**。
-- **H3（Agent 比固定 Pipeline 更可靠）：**沒有匹配工具與故障注入的實測比較，**Planned / NOT RUN**。
-
-## 4. OpenSpec 進度與執行方式
-
-GitHub 上含 OpenSpec 設定、Codex／Copilot Skills 及本次 `refactor-smart-parking-proposal` 的 Proposal／Delta Spec／Design／Tasks。此工作由 **ChatGPT GitHub Connector 直接提交 Markdown**，不是在遠端主機安裝 CLI。
-
-- 文件存在、相互連結、原始章節對應與 delta-spec 語法可由 GitHub 人工驗收。
-- **尚未執行** `openspec init`、`openspec validate` 或原始專案的 Python 測試及模型訓練。
-- 本 Repo 中的 DESIGN.md 引用的 `src/`、`web/`、`PHASE2_REPORT.md` 等來源工作區檔案**未包含在這個文件交付 Repo**，不能用路徑文字當成已驗收的程式。
-
-如需本機原生 OpenSpec，另見 [OPENSPEC_SETUP.md](OPENSPEC_SETUP.md)。**文件規格完成 ≠ OpenSpec CLI 驗證成功 ≠ 新北模型驗證成功。**
-
-## 5. 可追溯性與建議後續
-
-1. [查看原始對修訂章節](docs/refactor/BEFORE_AFTER.md)，含 DOCX §1–§3 與 DESIGN §§9–15 的依據。
-2. [查看完整文獻核對](docs/references/REFERENCE_AUDIT.md)，原稿九篇 [5]–[13] 均有外部來源資訊，但不是全部實驗結果的獨立重現。
-3. [查看驗收報告](docs/refactor/ACCEPTANCE.md)，保留 PASS/PARTIAL/BLOCKED/NOT RUN 與可行的後續工作。
-
-**原則：Evidence first · Abstain when uncertain · Do not claim a result without the matching experiment.**
-
-## 6. 本次人工規格驗證（不執行 CLI）
-
-[完整人工 OpenSpec 驗證逐項紀錄](docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md) 核對 9 個 Requirement、9 個 Scenario、5/3/10、原始 DOCX/PPTX/PDF/DESIGN.md、94 個本地相對連結（0 個失效），以及 Proposal → Specs → Design → Tasks → Apply → Verify 的文件證據。**9/9 只代表文件 Requirement 的人工檢查覆蓋率**，不是模型通過率或官方 OpenSpec 驗證。`openspec validate` 仍為 **NOT RUN**，H1–H3 的完整可重現驗證尚未完成。
+詳細證據請參閱 [OpenSpec Manual Verification](docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md)；本機 CLI 使用方式另見 [OPENSPEC_SETUP.md](OPENSPEC_SETUP.md)。

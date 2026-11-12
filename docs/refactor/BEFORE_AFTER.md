@@ -1,34 +1,25 @@
-# Before / After Audit — Original DOCX and DESIGN Aligned
+# Before / After — 研究提案重構對照
 
-**Original sources remain unchanged:** [Proposal DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx), [DESIGN.md](../../DESIGN.md), [Proposal Analysis PDF](../submission/智慧停車提案解析.pdf), and [Original README snapshot](../baseline/README_BEFORE.md) from commit `f060df0569667769c9053b7affe87265cfeb415f`.
+**原稿來源：**[DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx)、[PPTX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx)、[DESIGN.md](../../DESIGN.md)、[提案解析 PDF](../submission/智慧停車提案解析.pdf)；另保留 [README 原稿快照](../baseline/README_BEFORE.md)。
 
-**Chronology:** Earlier academic refactor preceded the source DOCX/DESIGN uploads, so this new audit links **actual original sections** to revised deliverables. Do not describe the later uploaded DESIGN.md as a document whose content was itself rewritten; only derived academic chapters and OpenSpec audit records were revised.
+| 原始段落／內容 | 重構文件 | 核心改善 |
+| --- | --- | --- |
+| DOCX Abstract A–F | [ABSTRACTS.md](../research/ABSTRACTS.md) | 以 A–F 建立一致論述；區分抽樣與 Phase 2 離線數據，不虛構實驗成果 |
+| DOCX §1.1–1.3 背景、問題、研究缺口 | [INTRODUCTION.md](../research/INTRODUCTION.md) §§A–C | 明確定義查詢時間 `t`、抵達時距 `h`、資料品質、可驗證研究缺口 |
+| DOCX §1.4–1.6 H1–H3、Agent 必要性、貢獻 | [INTRODUCTION.md](../research/INTRODUCTION.md) §§D–F | 定義可反駁假設、Baseline、固定 Pipeline 對照與貢獻範圍 |
+| DOCX §2.1–2.2 Related Work | [RELATED_WORK.md](../research/RELATED_WORK.md) | 原稿九項文獻 [5]–[13] 分類比較，指出可移植性限制 |
+| DOCX §3.1–3.3 Five／Three／Ten | [RESEARCH_5_3_10.md](../research/RESEARCH_5_3_10.md) | 每項問題對應證據、實驗或決策條件 |
+| DOCX §4 Agent 流程及偽程式碼、PPTX 9–11 頁 | [INTRODUCTION.md](../research/INTRODUCTION.md) §E | 明確區分規劃流程與可實證的 Agent 增益 |
+| DOCX §5–7、PPTX 12–16 頁 | [INTRODUCTION.md](../research/INTRODUCTION.md) §§D–F | 補上可重現的研究設計、實驗狀態與判定界線 |
+| DESIGN.md §§10–11 新北離線比較／品質限制 | [SOURCE_SCOPE_RECONCILIATION.md](SOURCE_SCOPE_RECONCILIATION.md) · [INTRODUCTION.md](../research/INTRODUCTION.md) | 說明 Persistence 整體較佳與未修正的切分邊界問題 |
+| DESIGN.md §§12–15 臺中 Agent | [SOURCE_SCOPE_RECONCILIATION.md](SOURCE_SCOPE_RECONCILIATION.md) | 區分臺中已記載的資訊型功能與新北預測研究 |
+| 原稿參考文獻 [5]–[13] | [REFERENCE_AUDIT.md](../references/REFERENCE_AUDIT.md) | 核對九項研究的書目、方法與限制 |
 
-| Source | Original issue or contract | Refactored artifact | Verified improvement / status |
-| --- | --- | --- | --- |
-| DOCX §Abstract A–F (p.2) | Initial 7.12 sample in Findings; full QA still described as Planned | [ABSTRACTS](../research/ABSTRACTS.md) | Separates sample 7.12 from later source-reported offline Phase 2, avoids false completed deployment |
-| DOCX §1.1–1.2 (pp.2–3) | Why arrival matters; input/output contract | [INTRODUCTION](../research/INTRODUCTION.md) §§A–B | Explicit decision cutoff `t`, arrival horizon `h`, provenance and quality |
-| DOCX §1.3 (p.3) | Empirical data gap vs integration gap | [INTRODUCTION](../research/INTRODUCTION.md) §C | Bounds project-level claim; recognizes prior uncertainty/integration work |
-| DOCX §§1.4–1.5 (p.3) | H1–H3 and Agent need | [INTRODUCTION](../research/INTRODUCTION.md) §D | Discloses Persistence best on source-reported Phase 2 aggregate; requires fixed pipeline for H3 |
-| DOCX §1.6 (pp.3–4) | Claimed contributions and prototype status | [INTRODUCTION](../research/INTRODUCTION.md) §§E–F | Distinguishes intended New Taipei contributions from Taichung source-reported implementations |
-| DOCX §2.1 (p.4) | Mixed statistical, spatial, Bayesian methods | [RELATED_WORK](../research/RELATED_WORK.md) §§A–D | Critical taxonomy with unit/horizon transfer constraints |
-| DOCX §2.2 (pp.4–5) | Original **nine** references [5]–[13] | [RELATED_WORK](../research/RELATED_WORK.md) §E + [REFERENCE_AUDIT](../references/REFERENCE_AUDIT.md) | **9/9** original reference identifiers located/checked on publisher or dataset pages |
-| DOCX §3.1–3.3 (pp.5–6) | 5 mindsets / 3 controversies / 10 questions | [RESEARCH_5_3_10](../research/RESEARCH_5_3_10.md) | Explicit item-to-method mapping and decision criteria |
-| DOCX §4.1–4.3 (pp.6–7) | Planner/tool/validation/pseudocode | [INTRODUCTION](../research/INTRODUCTION.md) §§B,D–E | Proposed New Taipei workflow separate from implemented Taichung current-information Agent |
-| DOCX §§5–7 (pp.7–10) | Original New Taipei QA plans, H1 targets, reported 9 tests | [INTRODUCTION](../research/INTRODUCTION.md) §E + [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) | Temporal purge requirement and evidence classes; no invented new tests |
-| DESIGN.md §10 | Later offline metrics, **Persistence best** | [INTRODUCTION](../research/INTRODUCTION.md), [ABSTRACTS](../research/ABSTRACTS.md) | Corrects older text stating all offline experiments unrun |
-| DESIGN.md §11 | Label crossing, unchanged occupancy and conditional trust | [INTRODUCTION](../research/INTRODUCTION.md), [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) | No blanket production-ready or perfect temporal split claims |
-| DESIGN.md §§12–15 | Taichung Agent/operations | [INTRODUCTION](../research/INTRODUCTION.md) §E + [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) | Taichung current-information vs New Taipei predictive service separated |
-| Prior OpenSpec docs | Old citations and missing-document status | [OpenSpec Change](../../openspec/changes/refactor-smart-parking-proposal/proposal.md), [Acceptance](ACCEPTANCE.md) | Update after new source uploads; CLI still NOT RUN |
+## 保留的重要研究界線
 
-## Important non-equivalences
+- 抽樣 MAE 約 7.12 與 Phase 2 MAE 0.326757 的實驗樣本及設計不同，不能直接比較。
+- 原設計記載的 Phase 2 整體 MAE 不支持 RF／HistGB 優於 Persistence。
+- 文獻存在不代表研究結果已移轉至新北市；SFpark 的城市政策成效不是本 Agent 的成效。
+- 文件中的設計與測試計畫不等於模型已部署或 H2／H3 已驗證。
 
-1. Original DOCX is a **proposal**, later DESIGN contains an **offline experiment narrative** and **Taichung implementation narrative**.
-2. MAE 7.12 (sample) and 0.326757 (later Phase 2) are different experiments, **not a same-split before/after improvement**.
-3. Implemented/Evaluated in a **source file** does not imply independently reproduced from this documentation-only GitHub repo.
-4. SFpark 43% and 30% are external parking policy evidence, **not this system's outcomes**.
-5. Citation/bibliography verification does not equal reproduced research paper statistics.
-
-## Verification boundary
-
-**Document content comparison: PASS** for a source-based conceptual and section-level audit. **Pixel-perfect or tracked-change DOCX redline: NOT PERFORMED**; native DOCX remains unchanged. **Executable/empirical validation: NOT RUN** within this repository.
+**對照結果：**已完成原稿與重構文件的章節級內容對照。原始 DOCX／PPTX／PDF／DESIGN.md 未修改。
