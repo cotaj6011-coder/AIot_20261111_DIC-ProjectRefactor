@@ -4,7 +4,7 @@
 
 | File | Source type | What it proves | What it does not |
 | --- | --- | --- | --- |
-| [Original New Taipei DOCX](../submission/智慧停車AI_Agent_Proposal_新北市(1).docx) | **Primary submitted proposal, 11 pages** | Original A–F, §1 Introduction, §2 Related Work, §3 5/3/10, §4 Agent, §5–7 QA/evaluation/status, original [5]–[13] references | Does not by itself prove all proposed experiments completed |
+| [Original New Taipei DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) | **Primary submitted proposal, 11 pages** | Original A–F, §1 Introduction, §2 Related Work, §3 5/3/10, §4 Agent, §5–7 QA/evaluation/status, original [5]–[13] references | Does not by itself prove all proposed experiments completed |
 | [Original DESIGN.md](../../DESIGN.md) | **Design and subsequent progress narrative** | States separate Taichung Agent implementation and New Taipei Phase 2/2.5 offline evaluation results, timeline and limitations | Cannot verify missing code, trained models or test logs |
 | [Original proposal analysis PDF](../submission/智慧停車提案解析.pdf) | **Prior analysis / infographic source, 4 pages** | Records proposal diagnostic, chart mapping and preliminary states at time created | Earlier analysis should not override later actual DESIGN results or prove completed experiments |
 | [README before OpenSpec](../baseline/README_BEFORE.md) | **Snapshot of repository's initial summary** | Audit trail for what earlier ChatGPT refactor actually used | Not a substitute for original DOCX and DESIGN |

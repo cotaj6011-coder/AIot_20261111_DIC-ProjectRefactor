@@ -1,6 +1,6 @@
 # Before / After Audit — Original DOCX and DESIGN Aligned
 
-**Original sources remain unchanged:** [Proposal DOCX](../submission/智慧停車AI_Agent_Proposal_新北市(1).docx), [DESIGN.md](../../DESIGN.md), [Proposal Analysis PDF](../submission/智慧停車提案解析.pdf), and [Original README snapshot](../baseline/README_BEFORE.md) from commit `f060df0569667769c9053b7affe87265cfeb415f`.
+**Original sources remain unchanged:** [Proposal DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx), [DESIGN.md](../../DESIGN.md), [Proposal Analysis PDF](../submission/智慧停車提案解析.pdf), and [Original README snapshot](../baseline/README_BEFORE.md) from commit `f060df0569667769c9053b7affe87265cfeb415f`.
 
 **Chronology:** Earlier academic refactor preceded the source DOCX/DESIGN uploads, so this new audit links **actual original sections** to revised deliverables. Do not describe the later uploaded DESIGN.md as a document whose content was itself rewritten; only derived academic chapters and OpenSpec audit records were revised.
 

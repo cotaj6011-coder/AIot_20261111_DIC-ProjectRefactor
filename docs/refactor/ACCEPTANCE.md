@@ -14,7 +14,7 @@
 
 | Topic | Evidence | Manual assessment | Residual issue |
 | --- | --- | --- | --- |
-| Source inventory and immutable originals | [DOCX](../submission/智慧停車AI_Agent_Proposal_新北市(1).docx), [DESIGN](../../DESIGN.md), [PDF](../submission/智慧停車提案解析.pdf), [baseline README](../baseline/README_BEFORE.md) | **PASS** | PPTX not in repo; optional status unconfirmed |
+| Source inventory and immutable originals | [DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx), [DESIGN](../../DESIGN.md), [PDF](../submission/智慧停車提案解析.pdf), [baseline README](../baseline/README_BEFORE.md) | **PASS** | PPTX not in repo; optional status unconfirmed |
 | OpenSpec proposal / design / tasks | [Change](../../openspec/changes/refactor-smart-parking-proposal/proposal.md), [Design](../../openspec/changes/refactor-smart-parking-proposal/design.md), [Tasks](../../openspec/changes/refactor-smart-parking-proposal/tasks.md) | **PASS (file structure and content)** | Actual CLI NOT RUN |
 | OpenSpec delta-spec structure | [spec.md](../../openspec/changes/refactor-smart-parking-proposal/specs/research-proposal-refactor/spec.md) | **PASS (manually checked `## ADDED Requirements`, `### Requirement`, `#### Scenario`)** | Formal CLI validation NOT RUN |
 | A–F research story | [ABSTRACTS](../research/ABSTRACTS.md) / [5/3/10](../research/RESEARCH_5_3_10.md) | **PASS** | Final LMS text may be older; not resubmitted |

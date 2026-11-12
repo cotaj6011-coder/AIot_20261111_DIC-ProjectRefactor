@@ -27,7 +27,7 @@
 
 | 原始來源 | 位置 | 說明 |
 | --- | --- | --- |
-| **原始新北市提案 DOCX** | [智慧停車AI_Agent_Proposal_新北市(1).docx](docs/submission/智慧停車AI_Agent_Proposal_新北市(1).docx) | 原稿含 A–F、Introduction、Related Work [5]–[13]、5/3/10、Agent、Evaluation |
+| **原始新北市提案 DOCX** | [智慧停車AI_Agent_Proposal_新北市(1).docx](docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) | 原稿含 A–F、Introduction、Related Work [5]–[13]、5/3/10、Agent、Evaluation |
 | **原始 DESIGN.md** | [DESIGN.md](DESIGN.md) | 記錄跨城市設計與後續離線／資訊 Agent 進度 |
 | **原始提案解析 PDF** | [智慧停車提案解析.pdf](docs/submission/智慧停車提案解析.pdf) | 四頁原始分析，內容不隨重構自動更新 |
 | **OpenSpec 前 README 快照** | [README_BEFORE.md](docs/baseline/README_BEFORE.md) | 保留早期提交版本，供比對 |

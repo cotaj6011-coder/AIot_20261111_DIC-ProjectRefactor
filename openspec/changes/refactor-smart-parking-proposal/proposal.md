@@ -30,7 +30,7 @@ The DIC3 exercise calls for a **specification-driven refactor of a previously pr
 
 ## Evidence and scope
 
-1. [Original New Taipei proposal DOCX](../../../docs/submission/智慧停車AI_Agent_Proposal_新北市(1).docx), 11 pages.
+1. [Original New Taipei proposal DOCX](../../../docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx), 11 pages.
 2. [Original DESIGN.md](../../../DESIGN.md), §§9–15 include later cross-city development and offline model comparisons.
 3. [Original proposal-analysis PDF](../../../docs/submission/智慧停車提案解析.pdf), four pages.
 4. [Pre-refactor README snapshot](../../../docs/baseline/README_BEFORE.md) from `f060df0569667769c9053b7affe87265cfeb415f`.
