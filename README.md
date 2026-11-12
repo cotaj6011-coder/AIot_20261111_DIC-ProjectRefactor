@@ -1,3 +1,28 @@
+## DIC3 OpenSpec Proposal Refactor — 2026-11
+
+> **Document refactor delivered through ChatGPT–GitHub Connector.** OpenSpec **spec-driven file structure** was authored and reviewed; **OpenSpec CLI commands were not executed**, and prediction experiments remain unrun. This is not a claim of native CLI validation, nor of completed New Taipei model evaluation.
+
+### Reviewer / instructor navigation
+
+| Deliverable | GitHub file | Status |
+| --- | --- | --- |
+| OpenSpec change proposal | [proposal.md](openspec/changes/refactor-smart-parking-proposal/proposal.md) | Documented |
+| Testable OpenSpec requirements | [spec.md](openspec/changes/refactor-smart-parking-proposal/specs/research-proposal-refactor/spec.md) | Documented |
+| Design decisions | [design.md](openspec/changes/refactor-smart-parking-proposal/design.md) | Documented |
+| Work checklist | [tasks.md](openspec/changes/refactor-smart-parking-proposal/tasks.md) | Documented / remaining constraints flagged |
+| A–F + 5 core / 3 controversies / 10 questions | [RESEARCH_5_3_10.md](docs/research/RESEARCH_5_3_10.md) | Refactored |
+| Chinese and IEEE-style English abstracts | [ABSTRACTS.md](docs/research/ABSTRACTS.md) | Refactored proposal text |
+| Introduction | [INTRODUCTION.md](docs/research/INTRODUCTION.md) | Refactored research proposal |
+| Related Work | [RELATED_WORK.md](docs/research/RELATED_WORK.md) | Refactored research proposal |
+| References and evidence check | [REFERENCE_AUDIT.md](docs/references/REFERENCE_AUDIT.md) | Partial external audit; pending sources disclosed |
+| Original repository README snapshot | [README_BEFORE.md](docs/baseline/README_BEFORE.md) | Preserved from commit `f060df0` |
+| Before / After mapping | [BEFORE_AFTER.md](docs/refactor/BEFORE_AFTER.md) | README-based comparison |
+| Acceptance and outstanding blockers | [ACCEPTANCE.md](docs/refactor/ACCEPTANCE.md) | Manual documentary audit; CLI NOT RUN |
+
+**Scope restriction:** The original DOCX/PPTX, standalone DESIGN.md, datasets and notebooks are **not present in this GitHub repository**, so their exact pre/post comparison and experiment reproducibility are still blocked. The originally submitted PDF/PNG are separate LMS attachments; no requirement to duplicate them in this repository has been established. The remainder of this README preserves the previous proposal outline.
+
+---
+
 # 智慧停車 AI Agent
 ## 新北市路邊停車可用性預測與風險感知推薦
 

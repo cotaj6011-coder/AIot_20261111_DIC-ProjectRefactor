@@ -10,19 +10,21 @@
 - [x] 2.2 Map A–F, 5/3/10, Introduction and Related Work requirements.
 
 ## 3. Academic refactor
-- [ ] 3.1 Create 5/3/10 analysis and A–F outline.
-- [ ] 3.2 Write refactored Introduction with evidence boundaries and falsifiable H1–H3.
-- [ ] 3.3 Write critical Related Work and publication comparison table.
-- [ ] 3.4 Write bilingual abstracts and remove unsupported claim of demonstrated feasibility.
+- [x] 3.1 Create 5/3/10 analysis and A–F outline.
+- [x] 3.2 Write refactored Introduction with evidence boundaries and falsifiable H1–H3.
+- [x] 3.3 Write critical Related Work and selected-publication comparison table.
+- [x] 3.4 Write bilingual abstracts and remove unsupported claim of demonstrated feasibility.
+- [ ] 3.5 Reconcile the refactored text with the **full original** DOCX/PPTX/DESIGN.md (**BLOCKED**).
 
 ## 4. Evidence and acceptance
-- [ ] 4.1 Audit literature identifiers and unresolved sources.
-- [ ] 4.2 Produce before/after traceability.
-- [ ] 4.3 Check each written spec manually and create acceptance report.
-- [ ] 4.4 Update README navigation.
-- [ ] 4.5 Verify final main branch through GitHub API.
+- [x] 4.1 Create limited paper DOI/source audit and flag unresolved citations.
+- [x] 4.2 Produce README-based before/after traceability.
+- [x] 4.3 Manually map written specs to deliverables and create acceptance report, including gaps.
+- [x] 4.4 Update README navigation.
+- [ ] 4.5 Verify final main branch file existence after last commit (verification step).
 
 ## 5. Outside this GitHub-only operation
 - [ ] 5.1 Run native `openspec validate` (**NOT RUN; CLI unavailable in connector**).
 - [ ] 5.2 Run New Taipei full-data experiments and H1–H3 (**NOT RUN**).
 - [ ] 5.3 Verify formal LMS submission requirements (**PENDING source**).
+- [ ] 5.4 Complete full metadata / full-text audit of every cited research article (**PARTIAL**).
