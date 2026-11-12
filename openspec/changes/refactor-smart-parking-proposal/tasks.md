@@ -32,7 +32,7 @@
 - [x] Update README navigation, source links, stage-accurate claims and review status.
 - [x] Update OpenSpec proposal/design/spec, acceptance and before/after evidence.
 - [x] Perform manual syntax/link check of all authored Markdown artifacts (does not equal CLI validation).
-- [ ] Verify **final** main branch contents and exact link targets after commit (post-commit gate).
+- [x] Verify `main` at commit `ed12612fbcd171835b2a593dee866a462b8701f6`: 31 files, 15 authored Markdown documents checked, 0 broken relative links, delta spec 9 requirements / 9 scenarios, and research counts 5/3/10.
 - [ ] Verify teacher LMS formal submission criteria and whether optional PPTX is needed (NOT AVAILABLE in GitHub).
 
 ## 6. Final status

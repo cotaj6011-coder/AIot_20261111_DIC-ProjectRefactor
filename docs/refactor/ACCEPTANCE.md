@@ -62,3 +62,7 @@
 2. No raw New Taipei JSONL, trained artifacts, `PHASE2_REPORT.md`, `PHASE3_REPORT.md`, local test suite, runtime, or fixed-pipeline-vs-Agent evidence in this documentation repository.
 3. The original submitted LMS abstracts/attachments may differ from this refactor; submission revisions must be performed separately and should not be invented.
 4. Native OpenSpec CLI validation and actual research tests are **NOT RUN**. Static document checks are not equivalent.
+
+## Remote repository link and structure verification
+
+At GitHub commit `ed12612fbcd171835b2a593dee866a462b8701f6`, the connector confirmed **31 files**, fetched **15** authored non-Skill Markdown documents, found **zero broken local relative Markdown links** after URL-decoding link paths, counted **nine requirement headers and nine scenario headers** in the OpenSpec delta spec, and confirmed **5 / 3 / 10** numbered research items. The original DOCX, PDF and DESIGN.md Git blob SHAs matched their pre-review values. This is a **static audit**, not an execution of the native OpenSpec CLI or research experiments.
