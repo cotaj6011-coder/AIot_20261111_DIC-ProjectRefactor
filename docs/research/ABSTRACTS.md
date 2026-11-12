@@ -1,28 +1,30 @@
-# A–F Aligned Abstracts (Proposal Status)
+# Refactored A–F Abstracts — New Taipei Proposal
 
-> These are **newly refactored proposal abstracts**, not replacements claimed to be identical to the LMS submission. The A–F labels describe argument structure; IEEE-style final abstract below is one coherent paragraph. Results are not invented.
+> Newly authored academic proposal summaries derived from the original DOCX, the later DESIGN.md and the paper audit. **Not** a claim that the LMS already received this revised text. Keep historical sample and Phase 2 results separate.
 
-## 中文濃縮摘要（約 300 字，A–F）
+## 中文摘要（約 300 字；A–F 對應）
 
-駕駛查詢停車資訊時顯示「目前有位」，不代表抵達時仍可停車（A）。路邊停車需求變化、資料延遲、來源失效及預測不確定性，可能讓即時資訊無法支持可靠決策（B）。本研究以新北市路邊停車路段為對象，提出具資料品質閘門與風險感知的智慧停車 AI Agent，依預計抵達時間提供可追溯的 Top-k 建議，並在證據不足時退回基準或棄權（C）。系統規劃整合歷史 JSONL、即時 API、時間與路段特徵、Persistence 與樹模型，以及 Retry／Replan 與證據紀錄（D）。評估將採防洩漏的時間切分，比較 MAE、RMSE、滿位機率校準、Top-3 成功率與異常情境下的無證據推薦率（E）。現有提案記載抽樣 MAE 約 7.12 格，但尚無可於本儲存庫重現的完整實驗；全量資料品質、H1–H3 與實際推薦效益仍待驗證（F）。
+路邊停車資訊顯示「目前有位」，不代表駕駛抵達時仍有空位（A）。需求變動、觀測延遲、來源故障與預測誤差，可能使即時查詢產生錯誤引導（B）。本研究以新北市路邊路段為對象，提出具資料品質閘門、抵達時間風險判斷與可追溯 Top-k 建議的智慧停車 AI Agent；證據不足時退回基準或棄權（C）。方法整合歷史 JSONL、預定即時 API、時間特徵、Persistence／樹模型、Retry／Replan 及證據紀錄（D）。研究規劃依時間切分並排除跨界標籤洩漏，比較 MAE、滿位校準、Top-3 成功率與異常推薦品質（E）。原提案報告抽樣 MAE 約 7.12 格；後續設計文件記載新北離線測試以 Persistence 的 MAE 0.3268 最佳，但實驗程式未隨本儲存庫提供。正式推薦及 Agent 效益仍待驗證（F）。
 
-## English IEEE Transactions-style proposal abstract
+## IEEE-style English abstract (proposal, not completed results)
 
-**Title—An Uncertainty-Aware AI Agent for Arrival-Time Parking Availability Prediction and Risk-Aware Recommendation**
+**Title—**An Uncertainty-Aware AI Agent for Arrival-Time Parking Availability Prediction and Risk-Aware Recommendation
 
-**Abstract—**Real-time parking availability does not guarantee that a space will remain available when a driver arrives. In roadside settings, demand variation, observation latency, incomplete records, and source failures further undermine the reliability of static recommendations. This study proposes an evidence-aware smart parking AI agent for roadside segments in New Taipei City, Taiwan. The proposed architecture combines historical JSON Lines observations, a planned real-time data connector, schema and freshness validation, horizon-aligned persistence and tree-based prediction, candidate-specific risk rules, and traceable Top-k recommendations. Retry, replanning, fallback, and abstention are specified for cases in which reliable observations or sufficiently supported predictions are unavailable. A chronological 60/20/20 evaluation with safeguards against overlapping time-window leakage is planned. Persistence and historical-median baselines will be compared with candidate models using mean absolute error and root mean squared error; occupancy-risk calibration, arrival-time Top-3 success, selective coverage, and evidence-less recommendation rates will also be evaluated. An earlier sample notebook is reported in the source proposal to yield an MAE of approximately 7.12 spaces, but its underlying experiment is unavailable in this repository and does not establish operational feasibility or model superiority. The intended contribution is an experimentally testable integration of arrival-time prediction, source-quality awareness, and failure-aware decision support; its effectiveness remains to be demonstrated.
+**Abstract—**A parking space reported as vacant at query time may no longer be available when a driver arrives. Dynamic roadside occupancy, delayed observations, and source failures complicate reliable guidance. This study proposes an evidence-aware smart parking AI agent for roadside segments in New Taipei City, Taiwan, combining source-quality validation, arrival-horizon-aligned forecasting, candidate-specific risk assessment, and traceable Top-k recommendations. The proposed workflow includes baseline and tree-based models, bounded retry and replanning, fallback, and abstention when trustworthy evidence is unavailable. A chronological 60/20/20 evaluation with purged cross-boundary targets is planned; prediction error, fullness-risk calibration, arrival-time Top-3 success, selective coverage, and fault-injection outcomes will be compared against matched baselines and a fixed pipeline. The original proposal reports an early sample-notebook MAE of approximately 7.12 spaces. A later design document reports New Taipei offline MAEs of 0.3268 for persistence, 0.4027 for random forest, and 0.5375 for histogram gradient boosting, with persistence performing best overall. These experiments are not reproducible from the current repository, and the offline evaluation does not establish a deployable New Taipei prediction service or successful arrival-time recommendations. The intended contribution is a falsifiable integration of data provenance, decision-time risk awareness, and failure-aware agent orchestration rather than a claim of proven superiority.
 
-**Index Terms—**Smart parking, artificial intelligence agents, arrival-time prediction, data quality, uncertainty-aware recommendation, intelligent transportation systems.
+**Index Terms—**Smart parking, arrival-time prediction, AI agent, data quality, uncertainty-aware recommendation, intelligent transportation systems.
 
-## A–F mapping
+## Exact A–F map
 
-| Component | Chinese | English |
+| Code | Source-supported argument | Research state |
 | --- | --- | --- |
-| A | 現在有位不等於抵達有位 | Opening sentence |
-| B | 需求變化、來源失效、資料延遲 | Motivation and limitations |
-| C | Agent 與 Top-k 風險感知推薦 | Proposed architecture and policy |
-| D | JSONL/API/模型/Retry | Architecture details |
-| E | 時間切分、Baseline、MAE、Top-3 | Proposed evaluation protocol |
-| F | 抽樣 7.12 但待重現，全量未完成 | Exploratory source claim and explicit limitations |
+| A — Attention Getter | Query-time vacancy does not guarantee arrival-time vacancy | Motivation |
+| B — But/Gap | Demand, delay, source quality, uncertainty | Problem framing |
+| C — Cure | Quality-aware risk policy and Top-k with abstention | Planned New Taipei workflow |
+| D — Development | JSONL / proposed API / baselines / Agent controls | Proposed New Taipei integration |
+| E — Experiments | Chronological/purged split; H1/H2/H3 comparisons | Some source-reported Phase 2 offline, no verified H2/H3 |
+| F — Findings & boundaries | 7.12 early sample; source-reported Phase 2 Persistence best; real recommendation outcome unknown | Source-reported, not reproduced here |
 
-**Publication note:** Unlike a completed experimental paper, the English abstract uses prospective language. SFpark results are intentionally moved to the Introduction's external motivation, not presented as this study's findings.
+**Important:** The two MAEs come from **different source-described experiments** and must not be compared as if they used a matched test set. The 0.3268 value is a regression MAE in parking spaces, **not** a parking-success probability. SFpark percentages are excluded from Findings because they are external policy outcomes.
+
+The formal word/character requirement is not independently verified from LMS; target ~300 Chinese characters is based on class demonstration, not an enforced journal limit.

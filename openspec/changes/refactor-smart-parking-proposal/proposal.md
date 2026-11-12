@@ -1,40 +1,48 @@
-# Change Proposal: Refactor Smart Parking AI Agent Research Proposal
+# Change Proposal: Source-Aligned Smart Parking Research Refactor
 
 ## Why
 
-The existing repository primarily contains a feature-oriented proposal README and OpenSpec Skills. The DIC3 assignment requires an auditable, specification-driven **document refactor** with an A–F abstract, 5 core mindsets, 3 controversies/trade-offs, 10 deep questions, and academically defensible Introduction and Related Work. Merely installing Skills does not meet this goal. The existing README has planned performance targets and exploratory sample results; these must not be represented as validated findings.
+The DIC3 exercise calls for a **specification-driven refactor of a previously prepared research proposal**, not just a repository of OpenSpec Skills. The initial academic rewrite was based on README because original artifacts had not yet been uploaded. With the later original New Taipei DOCX and DESIGN.md now present, this change must correct research-stage conflation, restore all nine original studies and provide defensible before/after evidence.
 
 ## What Changes
 
-- Preserve the exact original README as `docs/baseline/README_BEFORE.md` and retain its existing root content.
-- Create an explicit 5/3/10 evidence analysis and A–F abstract mapping.
-- Produce research-style Introduction and Related Work, with a comparison table and source-level evidence status.
-- Make H1–H3 falsifiable, distinguish New Taipei City data from Birmingham and other prototype experience, and specify data-quality and temporal-leakage controls.
-- Include bilingual abstracts and a verified-or-pending bibliography.
-- Record a reproducible before/after mapping, acceptance evidence, and any unresolved sources.
-- Update README to direct graders to the OpenSpec artifacts and refactored documents.
+- Preserve immutable original proposal DOCX, DESIGN.md, analysis PDF and initial README snapshot.
+- Trace A–F, five core mindsets, three controversies, ten questions, Introduction and Related Work to the original DOCX.
+- Refactor Introduction and Related Work to preserve New Taipei as the research study, while isolating Taichung's information-only implementation.
+- Reconcile original sample MAE (~7.12) with **different**, later DESIGN.md Phase 2 source-reported aggregate MAEs (Persistence 0.326757, RF 0.402669, HistGB 0.537539). Preserve Phase 2.5 limitations and H1 source-reported non-support.
+- Audit **all original references [5]–[13]** against identifiable publisher/dataset URLs.
+- Correct OpenSpec delta-spec headings, evidence labels, and README/Acceptance links; keep unreproducible research and native CLI verification as NOT RUN.
+- Supply a source-section-based before/after table and explicit unresolved items.
 
-## Non-goals
+## Capabilities
 
-- No new prediction training, API deployment, GIS implementation, data fabrication, or claimed model validation.
-- No automatic copy of PDFs/PNGs already submitted in the teaching platform.
-- No claim of successful `openspec init` or `openspec validate` execution; the GitHub connector edits files but cannot execute CLI commands.
+### New Capabilities
+- `research-proposal-refactor`: Deliver a traceable, verifiable, evidence-first academic proposal refactor aligned with the original 11-page New Taipei DOCX and later design material.
 
-## Source of truth
+### Modified Capabilities
+- None. No existing canonical capability specifications were present under `openspec/specs/` in the audited repository.
 
-1. Current repository README snapshot (committed verbatim).
-2. The student's supplied assignment instructions and 2026-11-11 lecture transcript discussed in ChatGPT, including the A–F and 5/3/10 workflow.
-3. The student's supplied Smart Parking proposal analysis PDF and bilingual abstract; their statements are treated as proposal claims unless independently reproduced or verified.
-4. External papers linked in `docs/references/REFERENCE_AUDIT.md`.
+## Impact
 
-**Source limitation:** The original DOCX/PPTX/standalone DESIGN.md and raw datasets are not present in this GitHub repository at the time of the change. Full diff against those artifacts is **BLOCKED** until available. This is not the same as the preserved README before/after comparison.
+- Documentation and OpenSpec change artifacts only: `docs/research/`, `docs/references/`, `docs/refactor/`, `README.md`, and `openspec/changes/refactor-smart-parking-proposal/`.
+- No source code, model weights, experiments, original DOCX/PDF, or source DESIGN.md are edited.
+- The OpenSpec CLI was **not run** by the GitHub Connector; static inspection is not an official validation result.
+
+## Evidence and scope
+
+1. [Original New Taipei proposal DOCX](../../../docs/submission/智慧停車AI_Agent_Proposal_新北市(1).docx), 11 pages.
+2. [Original DESIGN.md](../../../DESIGN.md), §§9–15 include later cross-city development and offline model comparisons.
+3. [Original proposal-analysis PDF](../../../docs/submission/智慧停車提案解析.pdf), four pages.
+4. [Pre-refactor README snapshot](../../../docs/baseline/README_BEFORE.md) from `f060df0569667769c9053b7affe87265cfeb415f`.
+5. [Citation audit](../../../docs/references/REFERENCE_AUDIT.md) and the original [5]–[13] DOI list.
+
+Source-specific evidence classes: **repo-verified document**; **source-reported implementation/evaluation not reproduced here**; **planned**; **blocked**. These must never be collapsed into a single unqualified PASS.
 
 ## Success criteria
 
-- Specs each have testable scenarios and are linked to output files.
-- A–F and 5/3/10 are explicitly documented and coherent.
-- Introduction states problem, gap, research questions/hypotheses, contribution **as a proposal**.
-- Related Work compares specific papers and states which gaps are proposed rather than proven.
-- References have traceable identifiers, with unresolved entries explicitly flagged.
-- No unsupported experimental, deployment, or CLI success claims.
-- Acceptance summary reports PASS/PARTIAL/BLOCKED by evidence, rather than marking everything passed.
+- Nine delta requirements have official OpenSpec-compatible header structure and WHEN/THEN scenarios.
+- DOCX §1–§3 and [5]–[13] are explicitly mapped to revised sections and references.
+- Revised Introduction and Related Work do not misattribute Taichung source-reported implementation to New Taipei production.
+- H1 is not falsely reported as passed; Phase 2 offline findings and split-boundary risk are disclosed.
+- All nine publication/dataset entries have working landing-page references checked at least at bibliographic/abstract level.
+- Manual acceptance is evidence-mapped, with native CLI and code/runtime experiments marked NOT RUN.

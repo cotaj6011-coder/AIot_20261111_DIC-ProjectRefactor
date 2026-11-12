@@ -1,40 +1,34 @@
-# Before / After Refactor Traceability
+# Before / After Audit — Original DOCX and DESIGN Aligned
 
-**Baseline commit:** `f060df0569667769c9053b7affe87265cfeb415f`. A full textual snapshot of root `README.md` is at [README_BEFORE.md](../baseline/README_BEFORE.md). This document describes the specific **README-derived** refactor; it does NOT pretend that the original DOCX/PPTX or standalone DESIGN.md were available **when the initial refactor was performed**. A DESIGN.md was provided and committed later; see [SOURCE_SCOPE_RECONCILIATION.md](SOURCE_SCOPE_RECONCILIATION.md).
+**Original sources remain unchanged:** [Proposal DOCX](../submission/智慧停車AI_Agent_Proposal_新北市(1).docx), [DESIGN.md](../../DESIGN.md), [Proposal Analysis PDF](../submission/智慧停車提案解析.pdf), and [Original README snapshot](../baseline/README_BEFORE.md) from commit `f060df0569667769c9053b7affe87265cfeb415f`.
 
-| Starting README | Observed content / risk | Refactored destination | Change rationale |
+**Chronology:** Earlier academic refactor preceded the source DOCX/DESIGN uploads, so this new audit links **actual original sections** to revised deliverables. Do not describe the later uploaded DESIGN.md as a document whose content was itself rewritten; only derived academic chapters and OpenSpec audit records were revised.
+
+| Source | Original issue or contract | Refactored artifact | Verified improvement / status |
 | --- | --- | --- | --- |
-| §1 Project overview | Present-vs-arrival insight, features but insufficient formal research framing | [Introduction](../research/INTRODUCTION.md) §§A–C | Defines operational question, bounded research gap and explicit scope |
-| §2 Agent architecture | Diagram with conceptual retry/replan, no experimental proof of benefit | [Introduction](../research/INTRODUCTION.md) §§D–E | Reframes agent's necessity as H3 versus fixed Pipeline |
-| §3 Data sources | Source-reported New Taipei JSONL, sampled MAE 7.12, Bangalore/Birmingham prototype | [Introduction](../research/INTRODUCTION.md) §F and [Reference Audit](../references/REFERENCE_AUDIT.md) | Distinguishes claims, provenance and missing reproducible evidence |
-| §4 Baselines and models | Candidate methods without critical literature synthesis | [Related Work](../research/RELATED_WORK.md) §§A–D | Links methods to identifiable publications and boundaries |
-| §5 H1–H3 | Hypotheses listed as Planned | [Introduction](../research/INTRODUCTION.md) §D | States falsifiability, controls, outcome definitions |
-| §6 Evaluation plan | Chronological split stated; overlap purge not explicit; metric list disconnected from hypotheses | [Introduction](../research/INTRODUCTION.md) §E and [OpenSpec Specs](../../openspec/changes/refactor-smart-parking-proposal/specs/research-proposal-refactor/spec.md) | Adds cutoff/purge boundaries, metric-to-hypothesis traceability |
-| §7 Prototype progress | “Implemented/Verified” may be mistaken as verified within this repo | [Research 5/3/10](../research/RESEARCH_5_3_10.md) and [Acceptance](ACCEPTANCE.md) | Separates self-reported external prototype from GitHub-verifiable docs |
-| §8 References | Six named scholarly/data references and a TDX entry, incomplete full paper coverage | [Related Work](../research/RELATED_WORK.md), [Reference Audit](../references/REFERENCE_AUDIT.md) | Checks selected DOIs and declares unresolved items |
-| No stand-alone abstracts | Initial README is not an A–F academic abstract | [Abstracts](../research/ABSTRACTS.md) | Adds ~300-character Chinese and 1-paragraph prospective IEEE style |
-| No 5/3/10 document | Insights scattered through README | [5/3/10](../research/RESEARCH_5_3_10.md) | Provides exactly 5 mindsets, 3 trade-offs, 10 testable questions |
-| No documented OpenSpec Change | Only Skills/config existed | [Change proposal](../../openspec/changes/refactor-smart-parking-proposal/proposal.md) | Makes requirements/decision/tasks reviewable |
+| DOCX §Abstract A–F (p.2) | Initial 7.12 sample in Findings; full QA still described as Planned | [ABSTRACTS](../research/ABSTRACTS.md) | Separates sample 7.12 from later source-reported offline Phase 2, avoids false completed deployment |
+| DOCX §1.1–1.2 (pp.2–3) | Why arrival matters; input/output contract | [INTRODUCTION](../research/INTRODUCTION.md) §§A–B | Explicit decision cutoff `t`, arrival horizon `h`, provenance and quality |
+| DOCX §1.3 (p.3) | Empirical data gap vs integration gap | [INTRODUCTION](../research/INTRODUCTION.md) §C | Bounds project-level claim; recognizes prior uncertainty/integration work |
+| DOCX §§1.4–1.5 (p.3) | H1–H3 and Agent need | [INTRODUCTION](../research/INTRODUCTION.md) §D | Discloses Persistence best on source-reported Phase 2 aggregate; requires fixed pipeline for H3 |
+| DOCX §1.6 (pp.3–4) | Claimed contributions and prototype status | [INTRODUCTION](../research/INTRODUCTION.md) §§E–F | Distinguishes intended New Taipei contributions from Taichung source-reported implementations |
+| DOCX §2.1 (p.4) | Mixed statistical, spatial, Bayesian methods | [RELATED_WORK](../research/RELATED_WORK.md) §§A–D | Critical taxonomy with unit/horizon transfer constraints |
+| DOCX §2.2 (pp.4–5) | Original **nine** references [5]–[13] | [RELATED_WORK](../research/RELATED_WORK.md) §E + [REFERENCE_AUDIT](../references/REFERENCE_AUDIT.md) | **9/9** original reference identifiers located/checked on publisher or dataset pages |
+| DOCX §3.1–3.3 (pp.5–6) | 5 mindsets / 3 controversies / 10 questions | [RESEARCH_5_3_10](../research/RESEARCH_5_3_10.md) | Explicit item-to-method mapping and decision criteria |
+| DOCX §4.1–4.3 (pp.6–7) | Planner/tool/validation/pseudocode | [INTRODUCTION](../research/INTRODUCTION.md) §§B,D–E | Proposed New Taipei workflow separate from implemented Taichung current-information Agent |
+| DOCX §§5–7 (pp.7–10) | Original New Taipei QA plans, H1 targets, reported 9 tests | [INTRODUCTION](../research/INTRODUCTION.md) §E + [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) | Temporal purge requirement and evidence classes; no invented new tests |
+| DESIGN.md §10 | Later offline metrics, **Persistence best** | [INTRODUCTION](../research/INTRODUCTION.md), [ABSTRACTS](../research/ABSTRACTS.md) | Corrects older text stating all offline experiments unrun |
+| DESIGN.md §11 | Label crossing, unchanged occupancy and conditional trust | [INTRODUCTION](../research/INTRODUCTION.md), [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) | No blanket production-ready or perfect temporal split claims |
+| DESIGN.md §§12–15 | Taichung Agent/operations | [INTRODUCTION](../research/INTRODUCTION.md) §E + [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) | Taichung current-information vs New Taipei predictive service separated |
+| Prior OpenSpec docs | Old citations and missing-document status | [OpenSpec Change](../../openspec/changes/refactor-smart-parking-proposal/proposal.md), [Acceptance](ACCEPTANCE.md) | Update after new source uploads; CLI still NOT RUN |
 
-## Research integrity changes
+## Important non-equivalences
 
-- Avoids using SFpark as this proposed Agent's outcome.
-- States R2–R4 as prior studies of spatial/uncertain parking forecasting, so claimed novelty is **joint risk-aware Agent evaluation**, not the first such algorithm.
-- Converts “model feasibility” from MAE≈7.12 to an **unreproduced exploratory source claim**.
-- Distinguishes requested GitHub *documentation* refactor from absent experimental software.
-- Uses a source-first policy; the “nine papers” described by proposal analysis is not reconstructed from thin air.
+1. Original DOCX is a **proposal**, later DESIGN contains an **offline experiment narrative** and **Taichung implementation narrative**.
+2. MAE 7.12 (sample) and 0.326757 (later Phase 2) are different experiments, **not a same-split before/after improvement**.
+3. Implemented/Evaluated in a **source file** does not imply independently reproduced from this documentation-only GitHub repo.
+4. SFpark 43% and 30% are external parking policy evidence, **not this system's outcomes**.
+5. Citation/bibliography verification does not equal reproduced research paper statistics.
 
-## Still missing for a full original-design diff
+## Verification boundary
 
-1. Source `DESIGN.md` is now available **after** the refactor, but a full content reconciliation and a corresponding refactored DESIGN version have not been produced. Original DOCX/PPTX remain unavailable.
-2. Full original Related Work nine-paper bibliography/table and original Introduction exact text.
-3. Actual New Taipei data and notebook / validation reports.
-4. Formal LMS written submission requirements and any required filenames.
-
-**Judgment:** README-based refactor evidence is available; original-DESIGN.md before/after proof remains **BLOCKED**.
-
-## Post-refactor source additions
-
-- [Original supplied DESIGN.md](../../DESIGN.md) was committed after the README-based refactor; it must be treated as a new source baseline, not silently substituted for the original README source.
-- [智慧停車提案解析.pdf](../submission/智慧停車提案解析.pdf) was included as the original 4-page PDF attachment.
-- [Scope reconciliation](SOURCE_SCOPE_RECONCILIATION.md) identifies Taichung-vs-New Taipei differences and the need for a follow-up design-aligned revision.
+**Document content comparison: PASS** for a source-based conceptual and section-level audit. **Pixel-perfect or tracked-change DOCX redline: NOT PERFORMED**; native DOCX remains unchanged. **Executable/empirical validation: NOT RUN** within this repository.

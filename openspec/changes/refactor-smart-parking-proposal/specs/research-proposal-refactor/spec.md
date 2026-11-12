@@ -1,55 +1,81 @@
-# Research Proposal Refactor — Delta Specification
+# Spec Delta — Research Proposal Refactor
 
-## REQ-01 Preserve source provenance
-The refactor MUST retain a byte-for-byte textual snapshot of the starting repository README, identify the base commit, and distinguish source text from later authored revisions.
+## Purpose
 
-### Scenario: reviewer checks revision origin
-**Given** only the initial GitHub README is present, **when** the revision is submitted, **then** the reviewer can locate `docs/baseline/README_BEFORE.md` and a change map identifying old sections, new sections, and unverifiable missing sources.
+This capability defines reviewable, evidence-grounded academic proposal deliverables for the DIC3 Smart Parking Agent refactor. The requirements govern document outputs and truthfulness, not execution of a deployed parking system.
 
-## REQ-02 A–F academic argument
-The proposal MUST explicitly cover A Attention Getter, B But/Gap, C Cure, D Development, E Experiments, and F Findings/limitations. F MUST not imply planned experiments were completed.
+## ADDED Requirements
 
-### Scenario: abstract inspection
-**When** a reviewer reads the abstracts and A–F mapping, **then** all six elements are identifiable, preliminary metrics are labeled exploratory, and future experiments use future-tense language.
+### Requirement: Primary-source traceability
+The refactor SHALL preserve the original DOCX, DESIGN.md, proposal-analysis PDF and pre-refactor README as separate source artifacts, and SHALL map changed academic sections to actual source headings.
 
-## REQ-03 Deep research 5/3/10
-The artifact MUST contain exactly five core mindsets, three controversies/trade-offs and ten deep questions, with evidence or testable implications for each.
+#### Scenario: Reviewer checks revised sections
+- **GIVEN** the repository contains both primary proposal and later design documents
+- **WHEN** the reviewer opens the before/after audit
+- **THEN** each revised Introduction/Related Work section maps to identifiable original DOCX section numbers
+- **AND** the supplied DESIGN.md is not misrepresented as having been rewritten or available before the first change
 
-### Scenario: count and relevance
-**When** a reviewer inspects `docs/research/RESEARCH_5_3_10.md`, **then** every numbered item maps to the arrival-time parking problem and proposed evaluation.
+### Requirement: A–F academic argument
+The abstract artifact SHALL explicitly identify A Attention Getter, B Gap, C Cure, D Development, E Experiments and F Findings/limitations, while preserving distinctions between planned work and source-reported results.
 
-## REQ-04 Introduction
-The revised Introduction MUST state motivation, operational unit (New Taipei roadside segments), arrival-horizon problem, current technical limitations, agent necessity, falsifiable H1–H3 and proposed contributions; it MUST separate source-supported evidence from proposed hypotheses.
+#### Scenario: A–F abstract inspection
+- **WHEN** a reviewer inspects the bilingual abstracts and argument map
+- **THEN** all six concepts are identifiable
+- **AND** the early 7.12-space sample and later 0.326757-space offline MAE are not treated as matched tests
 
-### Scenario: no false accomplishment
-**When** the Introduction is read, **then** unverified New Taipei end-to-end system performance is not described as demonstrated.
+### Requirement: Five-three-ten research analysis
+The refactor SHALL contain five core mindsets, three trade-offs and ten deep questions grounded in arrival-time parking decision utility.
 
-## REQ-05 Related Work
-Related Work MUST compare identifiable publications, their approaches, data/problem alignment, relevance and boundaries. It MUST NOT assert that no prior work studies uncertainty or arrival-horizon prediction when prior publications already do.
+#### Scenario: Review analysis count
+- **WHEN** the reviewer inspects the deep-research artifact
+- **THEN** exactly five mindsets, three trade-offs and ten questions are enumerated
+- **AND** questions connect to evidence, evaluation or failure handling
 
-### Scenario: evidence gap
-**When** claims of novelty are inspected, **then** they are phrased as a proposed *joint evaluation* of predictive quality, freshness, failure-aware decision-making and recommendation utility, not as unsubstantiated worldwide firsts.
+### Requirement: Academically bounded Introduction
+The Introduction SHALL describe New Taipei roadside segment arrival-time research, clear problem formulation, bounded novelty, falsifiable H1–H3, methods, expected contributions and limitations.
 
-## REQ-06 Reproducible evaluation plan
-The proposal MUST define chronological 60/20/20, purge/embargo treatment when future targets or windows cross split boundaries, past-only features, baseline comparisons, classification calibration and recommendation evaluation without data leakage.
+#### Scenario: Evaluate source and city scope
+- **WHEN** a reviewer reads the Introduction
+- **THEN** New Taipei offline forecasting and Taichung current-information Agent implementation are distinguished
+- **AND** a reported baseline advantage is not silently converted into a tree-model victory
 
-### Scenario: cutoff
-**When** computing a forecast at time t for horizon h, **then** no input from after t is allowed and target/feature windows may not leak between train, validation and test.
+### Requirement: Full source-aligned Related Work
+The Related Work SHALL critically compare all nine scholarly/data references [5]–[13] in the original DOCX and preserve their geographic, target and method differences.
 
-## REQ-07 Evidence states and citations
-All nontrivial results MUST carry evidence status (Implemented, Evaluated, Planned or Blocked), source city, dataset and horizon as applicable; external bibliographic entries MUST be traceable and unresolved claims explicitly marked.
+#### Scenario: Source table audit
+- **WHEN** the reviewer reads the comparison table and reference audit
+- **THEN** all original identifiers [5]–[13] appear with verifiable DOI or dataset landing page
+- **AND** metadata verification is not misrepresented as experimental reproduction
 
-### Scenario: reported MAE
-**When** the value 7.12 parking spaces appears, **then** it is labelled as an exploratory New Taipei sample notebook claim; sample size, model, split, and baseline comparison are missing, and no feasibility superiority is inferred.
+### Requirement: Reproducible evaluation protocol
+The documents SHALL specify time-cutoff-only features, chronological partitions, purging target windows crossing split boundaries, valid arrival-ground-truth tolerance and matched benchmark/Agent comparisons.
 
-## REQ-08 Delivery and acceptance
-The GitHub README MUST link all OpenSpec and revised-document artifacts, while acceptance MUST distinguish document content checks from an actual CLI validation or experimental run.
+#### Scenario: Temporal label boundary
+- **GIVEN** a sample at time t has a future target at t+h
+- **WHEN** its target timestamp crosses a nominal train/validation or validation/test boundary
+- **THEN** the evaluation protocol excludes or purges it rather than allowing cross-split target reuse
+- **AND** all features are restricted to those available no later than t
 
-### Scenario: grader review
-**When** the grader opens README, **then** the change, before/after, Intro, Related Work, 5/3/10 and acceptance evidence are discoverable without extra tooling.
+### Requirement: Evidence-state precision
+Each substantive system or performance claim SHALL distinguish source-reported implementation/evaluation from repository-verified artifacts, planned results and blocked reproduction.
 
-## REQ-09 Submission boundaries
-The repository MUST NOT imply the teacher required duplicating every LMS-uploaded PDF/PNG in GitHub. The record MUST flag formally unverified LMS submission rules.
+#### Scenario: Two different MAE claims
+- **WHEN** the documents report the 7.12-space notebook sample or the Phase 2 offline 0.326757/0.402669/0.537539 figures
+- **THEN** their stages, data source, non-comparability and non-reproduction in this GitHub repository are stated
+- **AND** H2/H3 and New Taipei live recommendation success are not labelled as tested
 
-### Scenario: attached images
-**When** PDFs/PNGs are absent from GitHub, **then** the README distinguishes externally submitted class attachments from version-controlled refactor artifacts.
+### Requirement: Honest OpenSpec validation status
+The change SHALL provide proposal, delta spec, design, tasks and acceptance artifacts but SHALL report native CLI validation as NOT RUN when it has not actually been executed.
+
+#### Scenario: Review change completeness
+- **WHEN** a reviewer opens the README and acceptance report
+- **THEN** all refactor artifacts have direct links and manual evidence statuses
+- **AND** no claimed PASS includes native CLI or production-model execution evidence that was not obtained
+
+### Requirement: Submission boundary clarity
+The delivery documentation SHALL distinguish GitHub refactor artifacts from LMS-submitted files and SHALL not invent a teacher requirement to upload all media twice.
+
+#### Scenario: PDF/PNG submission location
+- **WHEN** the reviewer looks for the PDF or infographic
+- **THEN** the PDF attachment in the repository is identified as an additional preserved source
+- **AND** any separate LMS submission expectation remains unverified unless a formal requirement is available

@@ -1,41 +1,44 @@
-# Tasks — Refactor Smart Parking AI Agent Research Proposal
+# Tasks — OpenSpec Smart Parking Proposal Refactor
 
-## 1. Source baseline
-- [x] 1.1 Inventory GitHub at initial commit `f060df0569667769c9053b7affe87265cfeb415f`.
-- [x] 1.2 Preserve verbatim pre-refactor `README.md` in `docs/baseline/README_BEFORE.md`.
-- [x] 1.3 Commit user-provided standalone DESIGN.md and proposal-analysis PDF, preserving them without rewriting.
-- [x] 1.4 Obtain and preserve the user-provided original New Taipei DOCX.
-- [ ] 1.5 Obtain the original PPTX if needed and perform full original DOCX/DESIGN.md versus academic refactor comparison (**PARTIAL/BLOCKED**).
+## 1. Primary-source inventory and preservation
+- [x] Verify the 11-page original New Taipei proposal DOCX is present and keep binary unchanged.
+- [x] Verify original DESIGN.md, four-page proposal-analysis PDF and original README snapshot are present and unchanged.
+- [x] Compare original DOCX §1–§3 and references [5]–[13] to refactored artifacts.
+- [ ] Obtain the original PPTX **if independently required** (not present; not established as mandatory for this GitHub refactor).
+- [ ] Obtain full New Taipei datasets and the source-referenced PHASE2/PHASE3 reports for independent reproduction (BLOCKED: not in repo).
 
-## 2. OpenSpec plan
-- [x] 2.1 Write proposal, measurable specs, document design and task list.
-- [x] 2.2 Map A–F, 5/3/10, Introduction and Related Work requirements.
+## 2. OpenSpec requirements and design
+- [x] Specify change purpose, scope, proposed capability, constraints and acceptance criteria.
+- [x] Use OpenSpec delta-spec headings (Purpose / ADDED Requirements / Requirement / Scenario).
+- [x] Establish a verified original-to-revised mapping and explicit evidence states.
+- [ ] Execute native OpenSpec CLI `openspec validate` (NOT RUN via GitHub Connector).
 
-## 3. Academic refactor
-- [x] 3.1 Create 5/3/10 analysis and A–F outline.
-- [x] 3.2 Write refactored Introduction with evidence boundaries and falsifiable H1–H3.
-- [x] 3.3 Write critical Related Work and selected-publication comparison table.
-- [x] 3.4 Write bilingual abstracts and remove unsupported claim of demonstrated feasibility.
-- [ ] 3.5 Reconcile the refactored text with the **newly provided original DESIGN.md** and the newly added original New Taipei DOCX and the still-missing PPTX (**PARTIAL/BLOCKED**).
+## 3. Academic research refactor
+- [x] Distill A–F and bilingual abstract with prospective evaluation language.
+- [x] Reconcile 5 core mindsets, 3 controversies and 10 deep questions.
+- [x] Refactor Introduction from original DOCX §1 and later DESIGN findings.
+- [x] Refactor Related Work with **all nine** original DOCX references [5]–[13].
+- [x] Explain New Taipei proposed study vs offline results vs Taichung current-information Agent.
+- [x] Explicitly state H1 source-reported aggregate non-support and distinguish sample 7.12 vs Phase 2 0.326757 MAE.
 
-## 4. Evidence and acceptance
-- [x] 4.1 Create limited paper DOI/source audit and flag unresolved citations.
-- [x] 4.2 Produce README-based before/after traceability.
-- [x] 4.3 Manually map written specs to deliverables and create acceptance report, including gaps.
-- [x] 4.4 Update README navigation.
-- [x] 4.5 Verify main branch after document commit: all 13 required README/OpenSpec/refactor files were fetched successfully via GitHub API.
+## 4. Source and citation integrity
+- [x] Review nine original DOI/dataset landing pages for title, authors, year, domain and abstract/overview.
+- [x] Restrict SFpark effects to external contextual evidence.
+- [x] Distinguish publisher/abstract audit from full paper statistical replication.
+- [ ] Audit every underlying article's full empirical analysis and replicate its statistics (NOT RUN; not required for basic bibliography check).
+- [ ] Independently rerun New Taipei Phase 2, corrected purged split and H1/H2/H3 (NOT RUN).
 
-## 5. Outside this GitHub-only operation
-- [ ] 5.1 Run native `openspec validate` (**NOT RUN; CLI unavailable in connector**).
-- [ ] 5.2 Run New Taipei full-data experiments and H1–H3 (**NOT RUN**).
-- [ ] 5.3 Verify formal LMS submission requirements (**PENDING source**).
-- [ ] 5.4 Complete full metadata / full-text audit of every cited research article (**PARTIAL**).
+## 5. Repository delivery
+- [x] Update README navigation, source links, stage-accurate claims and review status.
+- [x] Update OpenSpec proposal/design/spec, acceptance and before/after evidence.
+- [x] Perform manual syntax/link check of all authored Markdown artifacts (does not equal CLI validation).
+- [ ] Verify **final** main branch contents and exact link targets after commit (post-commit gate).
+- [ ] Verify teacher LMS formal submission criteria and whether optional PPTX is needed (NOT AVAILABLE in GitHub).
 
-## 6. Subsequent source additions
-- [x] 6.1 Add user's original DESIGN.md, without altering its contents.
-- [x] 6.2 Add user's original proposal-analysis PDF binary, SHA-256 `f8d883960ae8fd903e57bd037bf6cff55c1cb253e331ec6334cf0c9fdc550a12`.
-- [x] 6.3 Create scope reconciliation note and update reviewer links.
-- [ ] 6.4 Perform a future academic refactor specifically grounded in the newly uploaded DESIGN.md, after confirming Taichung/New Taipei research-scope framing.
+## 6. Final status
 
-- [x] 6.5 Add original user-provided New Taipei proposal DOCX as binary, SHA-256 `47e0ffb2e9718e8c6f8ce38112695e6c7476a3799b7bb7c8b2739350f4505503`.
-- [ ] 6.6 Update source-level Related Work comparison against DOCX refs [5]–[13] (the previous limited audit was written before original DOCX became available).
+**DOCUMENTARY REFACTOR: PASS (source-backed artifact presence and structured comparison).**  
+**OPEN SPEC CLI: NOT RUN.**  
+**PAPER BIBLIOGRAPHY: 9/9 metadata/abstract overview checked, no external statistical reproduction.**  
+**NEW TAIPEI LIVE AGENT/H2/H3: PLANNED / NOT EVALUATED HERE.**  
+**DATASET/PHASE2 INDEPENDENT REPRODUCTION: BLOCKED.**

@@ -1,46 +1,40 @@
-# Reference and Evidence Audit
+# Reference Audit — Original DOCX [5]–[13]
 
-Audit performed as a **limited, targeted external DOI / publisher check**, supplemented by original repository claims. It is not a systematic literature search. Title verification is not proof of all claims in a full text. Accessed during the November 2026 document refactor.
+**Basis:** Original uploaded `docs/submission/智慧停車AI_Agent_Proposal_新北市(1).docx` p.10–11 References, pp.4–5 Article Summary. All nine references below were individually checked against publicly accessible publisher or dataset landing pages during this refactor. Audit of **metadata and abstract/preview claims** is distinct from independent replication of paper results, and restricted/full papers are not asserted to have been read in full.
 
-## External sources
+## Original nine sources (numbering preserved)
 
-| ID | Source | Evidence checked | Audit |
+| DOCX | Source (publisher bibliographic record) | Verification and supported topic | Limitations |
 | --- | --- | --- | --- |
-| R1 | Ma, C., Huang, X., Li, J., “A review of research on urban parking prediction,” *Journal of Traffic and Transportation Engineering (English Edition)* 11(4), 700–720, 2024. https://doi.org/10.1016/j.jtte.2023.11.004 | Publisher page confirms authors/title/2024 review, spatiotemporal and noise themes | **VERIFIED metadata + abstract** |
-| R2 | “An attention-based dynamic graph model for on-street parking availability prediction,” *Transportation Research Part A*, vol. 193, art. 104391, 2025. https://doi.org/10.1016/j.tra.2025.104391 | Publisher page confirms title, year, graph methods; author list not copied without independent inspection | **VERIFIED title/DOI; author list PENDING** |
-| R3 | Qian, C., Yang, K., He, J., Peng, X., Huang, H., “Curb parking occupancy prediction based on real-time fusion of multi-view spatial-temporal information using graph attention gated networks,” *Applied Soft Computing*, vol. 171, 112781, 2025. https://doi.org/10.1016/j.asoc.2025.112781 | Publisher preview confirms title/authors, method, date | **VERIFIED metadata + summary** |
-| R4 | Nezhadettehad, A., Zaslavsky, A., Rakib, A., Loke, S.W., “Uncertainty-Aware Parking Prediction Using Bayesian Neural Networks,” *Sensors*, 25(11), 3463, 2025. https://doi.org/10.3390/s25113463 | Publisher full text confirms uncertainty and abstention/selective confidence setting | **VERIFIED metadata + research scope** |
-| R5 | Schneble, M., Kauermann, G., “Statistical modelling of on-street parking spot occupancy in smart cities,” 2025. https://doi.org/10.1093/jrsssc/qlaf017 | DOI appeared in original README; direct independent source could not be accessed in this check | **PENDING metadata/full text** |
-| R6 | Stolfi, D., “Parking Birmingham,” UCI Machine Learning Repository. https://doi.org/10.24432/C51K5Z | Dataset appears in original README; direct independent access unsuccessful in this check | **PENDING metadata/target semantics** |
-| R7 | San Francisco Municipal Transportation Agency, SFpark Pilot Project Evaluation / 2014 public summary. https://www.sfmta.com/getting-around/drive-park/demand-responsive-pricing/sfpark-evaluation and https://www.sfmta.com/press-releases/sfpark-evaluation-shows-parking-easier-cheaper-pilot-areas | Official SFMTA summary reports 43% reduction in parking search time and 30% reductions in circling-related VMT/GHG for pilot areas | **VERIFIED external historical policy evidence; NOT this Agent's results** |
+| **[5]** | **C. Ma, X. Huang, J. Li**, “A review of research on urban parking prediction,” *Journal of Traffic and Transportation Engineering (English Edition)* **11**(4), 700–720 (2024). https://doi.org/10.1016/j.jtte.2023.11.004 | **PASS metadata / abstract**: review of prediction approaches and research directions; [Publisher](https://www.sciencedirect.com/science/article/pii/S2095756424000710) | Review is not a New Taipei experiment. |
+| **[6]** | **R. Cao, H. Chen, D. Z. W. Wang**, “An attention-based dynamic graph model for on-street parking availability prediction,” *Transportation Research Part A* **193**, 104391 (2025). https://doi.org/10.1016/j.tra.2025.104391 | **PASS metadata / abstract**: attention-based static/dynamic/hidden graph forecasting; [Publisher](https://www.sciencedirect.com/science/article/pii/S0965856425000199) | No claim of this project's performance advantage. |
+| **[7]** | **C. Qian, K. Yang, J. He, X. Peng, H. Huang**, “Curb parking occupancy prediction based on real-time fusion of multi-view spatial-temporal information using graph attention gated networks,” *Applied Soft Computing* **171**, 112781 (2025). https://doi.org/10.1016/j.asoc.2025.112781 | **PASS metadata / abstract**: curb multi-view graph-attention recurrent fusion; [Publisher](https://www.sciencedirect.com/science/article/pii/S1568494625000924) | Effects in paper cannot be imported as New Taipei results. |
+| **[8]** | **M. Schneble, G. Kauermann**, “Statistical modelling of on-street parking spot occupancy in smart cities,” *Journal of the Royal Statistical Society Series C* **74**(4), 1128–1149 (2025). https://doi.org/10.1093/jrsssc/qlaf017 | **PASS metadata / abstract**: time-to-event / semi-Markov modeling of Melbourne on-street spot occupancy; [Publisher](https://academic.oup.com/jrsssc/article/74/4/1128/8046921) | Spot-level duration ≠ segment-level available-space count. |
+| **[9]** | **K. Vakrinou, E. G. Mantouka, E. I. Vlahogianni**, “Leveraging multisource data for off-street parking occupancy prediction: a twofold analysis,” *International Journal of Transportation Science and Technology* **21**, 352–371 (2026; DOI registered 2025). https://doi.org/10.1016/j.ijtst.2025.02.005 | **PASS DOI / title / venue / volume / abstract**: Athens four-garage off-street occupancy, LSTM/Transformer, horizon dependence and SHAP; [Publisher](https://www.sciencedirect.com/science/article/pii/S204604302500036X) | Off-street results and small facility count; cannot claim road-segment validity. |
+| **[10]** | **H. Kuang, K. Deng, Q. Wang, W. Ye, H. Qu, J. Li**, “Deep meta-learning approach for regional parking occupancy prediction considering heterogeneous and real-time information,” *Advanced Engineering Informatics* **64**, 102969 (2025). https://doi.org/10.1016/j.aei.2024.102969 | **PASS metadata / abstract**: regional heterogeneous real-time information and deep meta-learning; [Publisher](https://www.sciencedirect.com/science/article/pii/S1474034624006207) | Transfer to New Taipei untested here. |
+| **[11]** | **A. Nezhadettehad, A. Zaslavsky, A. Rakib, S. W. Loke**, “Uncertainty-Aware Parking Prediction Using Bayesian Neural Networks,” *Sensors* **25**(11), 3463 (2025). https://doi.org/10.3390/s25113463 | **PASS metadata / open full text abstract and method claims**: BNN addresses epistemic and aleatoric uncertainty, data scarcity/noise and confidence-based selection; [Publisher](https://www.mdpi.com/1424-8220/25/11/3463) | Distinguish proposed project's freshness/quality proxy from BNN decomposition. |
+| **[12]** | **F. Piccialli, S. Amitrano, D. Cerciello, A. Borrelli, E. Prezioso, M. Canzaniello**, “A digital twin framework for urban parking management and mobility forecasting,” *Nature Communications* **16**, 9400 (2025). https://doi.org/10.1038/s41467-025-65306-w | **PASS publisher metadata / full-text overview**: Caserta digital twin, multi-source parking management/forecasting and simulation; [Publisher](https://www.nature.com/articles/s41467-025-65306-w) | Integrated parking decision support is existing prior work; no novelty claim of first integration. |
+| **[13]** | **D. Stolfi**, “Parking Birmingham,” *UCI Machine Learning Repository*, cited as 2017 dataset, repository donation 2019. https://doi.org/10.24432/C51K5Z | **PASS metadata / dataset description**: 35,717 observations, four columns, October–December 2016, off-street garages; [UCI](https://archive.ics.uci.edu/dataset/482/parking+birmingham) | Repository says missing values exist; a particular local CSV's 0 blank cells is a separate source-specific QA claim. |
 
-## Critical caveats
+**Source alignment:** Original DOCX Reference labels [1]–[4] are **data, local schema, local sample notebook, and planned API**, not peer-reviewed literature. Their source/availability is preserved but **not independently verified** by checking the nine publication DOI records above.
 
-- **SFpark attribution**: Its intervention combines real-time information, demand-responsive pricing and other parking management changes. It does not isolate or demonstrate effects of this proposed AI Agent. Even controlled pilot analysis is not evidence of a causal effect for New Taipei deployment.
-- **Novelty**: R2/R3 already study predictive parking spatiotemporal methods and R4 studies uncertainty-aware prediction. Do not claim the field has no such methods.
-- **R5/R6**: The supplied links alone are not an independently audited citation. Keep flagged pending, or verify when accessible.
-- **Original nine-paper comparison**: The user's proposal analysis PDF reports nine papers in the original document, but the entire source bibliography is not present in this repository. We have **not** invented two missing papers or claimed to reproduce the original table.
-- **New Taipei JSONL / 7.12 MAE**: Dataset inventory, notebook, pipeline and reproducible samples are absent from this GitHub repo; both are proposal-reported and remain **unverified here**.
-- **Historical scope**: The README dates 2025-05-01 to 2026-11-02; segment identifiers, time zones, sampling intervals and source licensing remain to be audited from raw metadata.
-- **Agent prototype**: “9 tests OK” and prototype implementation claims in README cannot be verified without test code/output in this repository.
+## Supplemental outside-case evidence (NOT part of original [5]–[13])
 
-## Evidence type matrix
+**[S1]** SFMTA, *SFpark Pilot Evaluation* and its 2014 press release: [Official evaluation page](https://www.sfmta.com/getting-around/drive-park/demand-responsive-pricing/sfpark-evaluation), [Official press summary](https://www.sfmta.com/press-releases/sfpark-evaluation-shows-parking-easier-cheaper-pilot-areas). **PASS source identified**: reported search-time drop up to **43%** and approximately **30%** lower circling-related VMT/GHG in evaluated pilot areas. SFpark involved demand-responsive prices and other management changes. **Do not use these external policy effects as achieved AI Agent outcomes, nor as single-component causal attribution.**
 
-| Claim | Evidence type | Status |
-| --- | --- | --- |
-| This repository includes documented OpenSpec change artifacts | GitHub paths/commit history | Verifiable after commit |
-| Refactored Intro, Related Work and 5/3/10 exist | GitHub text artifact | Verifiable after commit |
-| New Taipei predictive model is better than Persistence | Held-out experimental evidence | **NOT EVALUATED** |
-| Top-3 risk ranking has better arrival success | Held-out recommendation experiment | **NOT EVALUATED** |
-| Agent retry/replan reduces unsupported suggestions | Matched fault-injection tests | **NOT EVALUATED** |
-| Sample MAE ≈7.12 | Source README assertion, notebook absent | **REPORTED, NOT REPRODUCED** |
-| Official SFpark 43% / 30% outcomes | SFMTA policy/evaluation evidence | **EXTERNAL, NOT PROJECT OUTCOME** |
+## Project claims versus citations
 
-## Sources links reviewed
+| Claim | Artifact | Evidence state | Correct wording |
+| --- | --- | --- | --- |
+| Early New Taipei notebook MAE ≈ 7.12 spaces | Original DOCX §5.1 and README | **SOURCE-REPORTED / NOT REPRODUCED** | Exploratory sample result; no matched split/capacity/baseline evidence here. |
+| New Taipei Phase 2 Persistence MAE 0.326757 (RF 0.402669; HistGB 0.537539) | DESIGN.md §10 | **SOURCE-REPORTED EVALUATED ELSEWHERE; NOT REPRODUCED HERE** | Offline +30/+60 comparison across same 9,178,935 test rows as reported; cannot claim production model readiness. |
+| Temporal crossing around split boundaries | DESIGN.md §11 | **SOURCE-REPORTED LIMITATION** | Nominal split boundary target crossing requires purged-label revalidation. |
+| Taichung information-only Agent | DESIGN.md §§12–15 | **SOURCE-REPORTED IMPLEMENTED ELSEWHERE** | Current-information Agent/GIS with prediction DISABLED; executable code not present here. |
+| New Taipei H2/H3, calibration, Top-3 user benefit | Original DOCX §6 and newer academic drafts | **PLANNED / NOT RUN IN REPOSITORY** | Testable hypotheses, no demonstrated superiority. |
 
-- https://www.sciencedirect.com/science/article/pii/S2095756424000710
-- https://www.sciencedirect.com/science/article/abs/pii/S0965856425000199
-- https://www.sciencedirect.com/science/article/pii/S1568494625000924
-- https://www.mdpi.com/1424-8220/25/11/3463
-- https://www.sfmta.com/getting-around/drive-park/demand-responsive-pricing/sfpark-evaluation
-- https://www.sfmta.com/press-releases/sfpark-evaluation-shows-parking-easier-cheaper-pilot-areas
+## Scope and verification protocol
+
+1. **Bibliography PASS** means that the title, author(s), DOI, venue/year, and **described research theme** were checked on publisher/dataset pages. It does **not** mean every experiment, figure, statistical conclusion or cited result was reproduced.
+2. Existing claims about API schema/license, field-level occupancy codes, original project test results and raw dataset quantities are **source assertions**, not data audits performed by the GitHub connector.
+3. Specific DOI records verified above come from current publisher / official data site pages. The formal LMS marking scheme and grading thresholds cannot be verified from these publications.
+4. SFpark external outcomes are contextual evidence only.

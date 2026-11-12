@@ -1,48 +1,53 @@
-# II. RELATED WORK — Critical Comparative Synthesis
+# II. RELATED WORK — Original DOCX-Aligned Critical Review
 
-> This section balances domain parking studies and AI methods. It does not infer a universal research gap merely from a small selected bibliography. The full original nine-paper table mentioned in proposal-analysis materials was not present in this repository; this is a **verified core subset**, not a claimed reconstruction of all nine original entries.
+> Refactor source: user-provided 11-page New Taipei proposal DOCX §2.1–§2.2 and References [5]–[13], cross-checked against its 5/3/10 §3 and standalone `DESIGN.md`. Previous revision used only a partial paper subset; this version **preserves all nine original entries**. Links and source-confidence appear in [REFERENCE_AUDIT.md](../references/REFERENCE_AUDIT.md).
 
-## A. Parking prediction as a domain and modeling problem
+## A. Domain knowledge and forecasting baselines
 
-Ma, Huang and Li's survey [R1] organizes parking research into behavioral, demand and parking-space prediction and synthesizes statistical, machine-learning and deep-learning approaches. It highlights spatiotemporal features and the challenge of noise or incomplete data. Its value here is to establish that prediction accuracy depends on observation quality, parking context and temporal/spatial structure; a survey does not establish the superiority of any specific New Taipei model.
+The survey by Ma, Huang and Li [5] categorizes urban parking prediction tasks and compares statistical, machine learning and deep learning families. It supports a problem-first model-selection strategy: occupancy of a roadside segment, time to arrival and availability of valid labels must be established before a more complex architecture is justified. It cannot validate a model on New Taipei by itself.
 
-For roadside occupancy, an attention-based dynamic graph study [R2] models multiple spatial relationships, while Qian *et al.* [R3] present a graph-attention/gated network with multi-view information for curb occupancy prediction. These studies motivate segment and neighborhood interactions and provide stronger research comparators than generic regression alone. Their existence also limits novelty claims: spatial graph forecasting is an established research direction. This proposal instead prioritizes reproducible baseline comparison and decision usefulness at arrival under the available New Taipei data.
+Schneble and Kauermann [8] study **individual on-street parking-spot occupancy durations** using time-to-event and semi-Markov modeling with Melbourne observations. Their domain and treatment of time-in-state may inform an occupancy-transition perspective, but an individual-spot duration outcome is not the same as a New Taipei segment's +30/+60-minute **available-space count**. The study is relevant precisely because it highlights a methodological contrast, not because its metrics can be directly reused here.
 
-## B. Uncertainty, reliability and selective prediction
+These sources strengthen the case for Persistence and same-weekday/time Historical Median as essential local benchmarks rather than weak competitors chosen only to make a neural model look good.
 
-Nezhadettehad *et al.* [R4] explicitly investigate Bayesian neural-network parking prediction and selective decisions using confidence thresholds under data scarcity and artificial noise. This is important counterevidence to any blanket statement that parking research lacks uncertainty quantification. However, calibrated prediction, explicit epistemic/aleatoric modeling and source freshness are **not interchangeable**. The proposed system's primary mechanism is a quality-aware and potentially calibrated **decision policy**; it does not claim to implement or validate Bayesian uncertainty decomposition.
+## B. Spatiotemporal and cross-region models
 
-A credible comparison should include not only predictive error but also selective risk at a stated coverage, the false reassurance caused by stale observations, and whether the system abstains when it cannot justify candidate ordering. Such tests are an **unverified research plan**, not a demonstrated difference from [R4].
+Cao, Chen and Wang [6] present an attention-based dynamic graph model for **on-street parking availability**, combining different graph representations with external information. Qian *et al.* [7] address **curb parking occupancy** through multi-view graph attention and recurrent fusion using geography, accessibility and POI signals. These works demonstrate that spatial interactions and domain context are already established research themes; the project cannot claim they are novel in general.
 
-## C. Operational parking data and system context
+Vakrinou, Mantouka and Vlahogianni [9] study **four off-street garages in Athens** using multi-source input. Their findings distinguish favorable short- versus longer-horizon sequence architectures; however, garage counts, data ownership and access patterns do **not** translate automatically to road-segment outcomes. The original DOCX correctly excludes off-street integration from the first New Taipei validation scope. Likewise, Kuang *et al.* [10] apply deep meta-learning to heterogeneous regional parking prediction, which is a plausible later transfer-learning comparator but not evidence of New Taipei transfer without explicit domain shift tests.
 
-SFpark [R7] couples better parking information with **demand-responsive pricing and management** and documented improved search-related outcomes. Its evaluation is an urban parking management case, not an Agent or arrival-time forecasting benchmark. Its reported reductions therefore support the importance of parking service design, but they cannot be credited to our proposed approach.
+## C. Uncertainty, source quality and selective decision-making
 
-The UCI Parking Birmingham dataset [R6] can support methodological exploration and QA prototypes, but its geographic, temporal and target semantics cannot be assumed to match New Taipei curbside segments. The original README states a separate Birmingham QA prototype and a sample New Taipei notebook, neither of which is present here as reproducible code.
+Nezhadettehad *et al.* [11] propose Bayesian neural networks that **explicitly address epistemic and aleatoric uncertainty** for parking prediction and investigate noisy/sparse-data and confidence-threshold conditions. This directly contradicts any broad statement that the parking literature has never modeled uncertainty. The proposed system's observation **freshness, missing-source quality, model variability and post-hoc calibration** are operational risk indicators; they should not be called a validated Bayesian decomposition. Whether a quality-aware abstention policy improves actual *arrival-time Top-k decision risk* must be independently tested.
 
-## D. Comparison matrix
+The distinction matters: a lower mean regression error cannot alone establish well-calibrated full-occupancy probability or reliable decisions under sensor/API failure.
 
-| Source | Domain / method | Relevant contribution | Boundary for this project | Identifier status |
+## D. Integrated urban decision-support systems and datasets
+
+Piccialli *et al.* [12] present a digital-twin framework for urban parking management and mobility forecasting in **Caserta**, with multiple heterogeneous IoT/operational inputs and a prediction/simulation pipeline. This establishes that integrated parking and decision support are **not inherently novel**. A defensible project contribution is a bounded comparison of **arrival-time curb availability, candidate-specific evidence and explicit fault-handling** rather than a general claim of first integration.
+
+The UCI Parking Birmingham dataset [13] is a public **off-street facility** dataset with 35,717 rows and four columns. It has legitimate value for quality-analysis methods but does not substitute for New Taipei roadside observations. Source `DESIGN.md` reports that a later New Taipei Phase 2 offline comparison was conducted and Persistence performed best in aggregate; this observation should be disclosed, not silently overwritten by the original proposal's H1 expectation.
+
+## E. Complete source-aligned comparison (DOCX refs [5]–[13])
+
+| Ref | Verified study / dataset | Method and data | What this project may learn | Non-transferable boundary |
 | --- | --- | --- | --- | --- |
-| [R1] Ma et al., 2024 | Urban parking prediction review | Model taxonomy, spatiotemporal challenges | Survey, not a New Taipei or fault-tolerant Agent test | DOI externally checked |
-| [R2] *An attention-based dynamic graph model…*, 2025 | On-street parking, attention/dynamic graphs | Spatial dependence and external features | Does not by itself validate our failure-aware Top-k policy | DOI/title checked; author list pending |
-| [R3] Qian et al., 2025 | Curb occupancy, graph-attention gated units | Spatial/multi-view curb prediction | Graph prediction result is not arrival-time decision utility | DOI/title/author checked |
-| [R4] Nezhadettehad et al., 2025 | Bayesian uncertainty-aware parking prediction | Uncertainty and selective prediction under limited/noisy data | Different uncertainty formulation; avoid claiming field lacks uncertainty work | DOI/full text checked |
-| [R5] Schneble and Kauermann, 2025 | On-street occupancy statistical modeling | Statistical comparator to complex AI | DOI currently unverified independently; no numeric claim used | PENDING |
-| [R6] UCI Parking Birmingham | Public dataset | External QA and prototyping | Different city/target; cannot transfer performance estimates | PENDING dataset-page check |
-| [R7] SFMTA SFpark evaluation | Real-world parking management with demand-responsive pricing | Practical policy/service value | Not an evaluation of this AI Agent or model | Official SFMTA checked |
+| [5] | Ma, Huang & Li (2024) | Urban parking prediction literature review | Choose target/horizon/data first; compare simple-to-complex methods | Review, not New Taipei evaluation |
+| [6] | Cao, Chen & Wang (2025) | On-street dynamic attention graphs | Spatial and temporal interaction features | Requires dependable neighboring information and leakage control |
+| [7] | Qian *et al.* (2025) | Curb occupancy MGA-GRU, multi-view spatial features | Accessibility/POI and spatial fusion may be useful | Domain features and external signals unvalidated for New Taipei |
+| [8] | Schneble & Kauermann (2025) | Melbourne spot-level time-to-event/semi-Markov | Occupancy-duration state information | Spot duration differs from segment space count |
+| [9] | Vakrinou, Mantouka & Vlahogianni (2026 volume) | Athens **off-street** garages, LSTM/Transformer and SHAP | Horizon and external-data trade-offs | Garage-to-curb transfer unsupported |
+| [10] | Kuang *et al.* (2025) | Regional parking meta-learning with heterogeneous inputs | Potential cross-region adaptation research | New Taipei benefit not demonstrated |
+| [11] | Nezhadettehad *et al.* (2025) | Parking BNN uncertainty and confidence thresholds | Selective prediction, uncertainty-aware decisions | Quality/freshness proxy ≠ validated uncertainty decomposition |
+| [12] | Piccialli *et al.* (2025) | Caserta multi-source digital twin and forecasting | Integration plus operational context | No demonstration of this specific arrival-time Agent |
+| [13] | Stolfi (UCI cited 2017) | Birmingham parking-garage observations (donated 2019) | QA and irregular sampling tests | Geographic/roadside and modern transportability limits |
 
-## E. Bounded project research gap
+**External policy example, not part of original DOCX [5]–[13]:** SFMTA SFpark evaluation [S1] describes benefits of parking availability/pricing operations. It does not establish any result for this project or isolate an AI Agent's effect.
 
-Based on [R1–R4] and the supplied proposal, the **testable contribution sought here** is not an original forecasting family but evaluation of an integrated **New Taipei roadside, arrival-time, evidence-aware decision workflow** with: (i) observed data quality and freshness checks; (ii) predictions matched to arrival horizons and compared against persistence; (iii) calibrated occupancy risk and route-constrained Top-k; and (iv) fault-triggered retry/replanning/fallback/abstention with logs.
+## F. Research positioning and remaining evidence gap
 
-It remains an *open empirical question* whether this composite workflow improves a fixed pipeline or simpler ranking. A systematic claim about the entire literature would require a defined search protocol and larger evidence set.
+Taken together, [5]–[12] cover forecasting, statistics, deep spatial models, uncertainty and integrated decision support. Therefore the research question is a **context-specific, testable systems comparison**, not that such categories do not exist in the literature. The proposed contribution is to evaluate whether a New Taipei **roadside arrival-time** workflow that combines data-quality gating, well-defined horizons, matched baselines, risk/coverage calibration and failure-aware Agent behavior generates better supported Top-k choices **than simpler alternatives using the same inputs**.
 
-## F. Research questions to preserve in future work
+The answer remains uncertain: `DESIGN.md` §10 reports Persistence outperforming RF and HistGB in aggregate offline MAE, and §11 notes substantial no-change cases and label-boundary caveats. H2/H3 and live New Taipei Agent evidence remain missing from this GitHub repository.
 
-- What is the benefit over Persistence at 10/30/60-minute horizons for segments with reliable labels?
-- How do uncertainty rejection and freshness thresholds affect risk **and** usable coverage?
-- When sources fail, does dynamic Agent planning improve supported recommendations relative to a fixed pipeline using the same tools?
-- Does improved full-occupancy risk estimation produce better Top-3 arrival-time outcomes at comparable walking distance?
-
-The bibliography and verified source URLs are maintained separately in [Reference Audit](../references/REFERENCE_AUDIT.md).
+For full citation metadata, audit levels and publisher/database URLs see [Reference Audit](../references/REFERENCE_AUDIT.md).
