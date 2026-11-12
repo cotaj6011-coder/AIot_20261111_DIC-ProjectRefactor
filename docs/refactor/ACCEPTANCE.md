@@ -1,6 +1,6 @@
 # Comprehensive Acceptance Audit — DIC3 OpenSpec Proposal Refactor
 
-**Audit date:** 2026-11-13. **Source base:** Original 11-page New Taipei DOCX (pp.2–11; §§1–7, refs [5]–[13]); standalone DESIGN.md (§§9–15); uploaded four-page proposal-analysis PDF; initial README snapshot at commit `f060df0569667769c9053b7affe87265cfeb415f`. **Validation mode:** documentary GitHub Connector read/compare + targeted publisher/dataset web checks. No formal grading, native OpenSpec CLI or model execution.
+**Audit date:** 2026-11-13. **Source base:** Original 11-page New Taipei DOCX (pp.2–11; §§1–7, refs [5]–[13]); standalone DESIGN.md (§§9–15); original New Taipei 16-slide PPTX; uploaded four-page proposal-analysis PDF; initial README snapshot at commit `f060df0569667769c9053b7affe87265cfeb415f`. **Validation mode:** documentary GitHub Connector read/compare + targeted publisher/dataset web checks. No formal grading, native OpenSpec CLI or model execution.
 
 ## Status vocabulary
 
@@ -14,7 +14,7 @@
 
 | Topic | Evidence | Manual assessment | Residual issue |
 | --- | --- | --- | --- |
-| Source inventory and immutable originals | [DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx), [DESIGN](../../DESIGN.md), [PDF](../submission/智慧停車提案解析.pdf), [baseline README](../baseline/README_BEFORE.md) | **PASS** | PPTX not in repo; optional status unconfirmed |
+| Source inventory and immutable originals | [DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx), [DESIGN](../../DESIGN.md), [PDF](../submission/智慧停車提案解析.pdf), [PPTX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx), [baseline README](../baseline/README_BEFORE.md) | **PASS** | PPTX uploaded as immutable proposal source; teacher requirement to duplicate it in Git remains unconfirmed |
 | OpenSpec proposal / design / tasks | [Change](../../openspec/changes/refactor-smart-parking-proposal/proposal.md), [Design](../../openspec/changes/refactor-smart-parking-proposal/design.md), [Tasks](../../openspec/changes/refactor-smart-parking-proposal/tasks.md) | **PASS (file structure and content)** | Actual CLI NOT RUN |
 | OpenSpec delta-spec structure | [spec.md](../../openspec/changes/refactor-smart-parking-proposal/specs/research-proposal-refactor/spec.md) | **PASS (manually checked `## ADDED Requirements`, `### Requirement`, `#### Scenario`)** | Formal CLI validation NOT RUN |
 | A–F research story | [ABSTRACTS](../research/ABSTRACTS.md) / [5/3/10](../research/RESEARCH_5_3_10.md) | **PASS** | Final LMS text may be older; not resubmitted |
@@ -58,7 +58,7 @@
 
 ## Remaining risks / blockers
 
-1. **No original PPTX** in this repo, but there is no independently confirmed teacher requirement that it be included here.
+1. **Original PPTX now preserved:** 16-slide New Taipei proposal in `docs/submission/` (77,376 bytes; SHA-256 `96cc9735035a3f0e57185e33fe0b18216fb1a5180c57d02c26009ec58bceb42b`). It reflects the earlier proposal status and does not constitute an independently verified later-stage experiment. No independently confirmed teacher requirement to duplicate it in Git has been established.
 2. No raw New Taipei JSONL, trained artifacts, `PHASE2_REPORT.md`, `PHASE3_REPORT.md`, local test suite, runtime, or fixed-pipeline-vs-Agent evidence in this documentation repository.
 3. The original submitted LMS abstracts/attachments may differ from this refactor; submission revisions must be performed separately and should not be invented.
 4. Native OpenSpec CLI validation and actual research tests are **NOT RUN**. Static document checks are not equivalent.
@@ -66,3 +66,10 @@
 ## Remote repository link and structure verification
 
 At GitHub commit `ed12612fbcd171835b2a593dee866a462b8701f6`, the connector confirmed **31 files**, fetched **15** authored non-Skill Markdown documents, found **zero broken local relative Markdown links** after URL-decoding link paths, counted **nine requirement headers and nine scenario headers** in the OpenSpec delta spec, and confirmed **5 / 3 / 10** numbered research items. The original DOCX, PDF and DESIGN.md Git blob SHAs matched their pre-review values. This is a **static audit**, not an execution of the native OpenSpec CLI or research experiments.
+
+## Original proposal PPTX addition — 2026-11-13
+
+- **PASS — Original source preservation:** [智慧停車AI_Agent_Proposal_新北市(1).pptx](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx) was uploaded unchanged as a binary file; file size **77,376 bytes**, SHA-256 **`96cc9735035a3f0e57185e33fe0b18216fb1a5180c57d02c26009ec58bceb42b`**.
+- **PASS — Topic/slide inventory:** 16 slides contain introduction/problem and H1–H3, Related Work, 5/3/10, JSONL/data quality, Agent architecture/pseudocode, evaluation, go/no-go, prototype status and conclusion.
+- **PARTIAL — Version reconciliation:** The PPTX represents the original proposal and states New Taipei full-data QA/model training as planned at that stage; the later DESIGN.md describes separate offline Phase 2 evidence. Their chronology must remain explicit rather than rewriting the original slides.
+- **NOT RUN:** Native OpenSpec CLI validation and all research/model experiments. Adding the PPTX changes source completeness, not scientific acceptance.

@@ -28,11 +28,12 @@
 | 原始來源 | 位置 | 說明 |
 | --- | --- | --- |
 | **原始新北市提案 DOCX** | [智慧停車AI_Agent_Proposal_新北市(1).docx](docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx) | 原稿含 A–F、Introduction、Related Work [5]–[13]、5/3/10、Agent、Evaluation |
+| **原始新北市提案 PPTX** | [智慧停車AI_Agent_Proposal_新北市(1).pptx](docs/submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx) | 16 張原始簡報：動機、H1–H3、Related Work、5/3/10、架構、流程、評估、原型與狀態；保留原稿，不視為更新後實驗報告 |
 | **原始 DESIGN.md** | [DESIGN.md](DESIGN.md) | 記錄跨城市設計與後續離線／資訊 Agent 進度 |
 | **原始提案解析 PDF** | [智慧停車提案解析.pdf](docs/submission/智慧停車提案解析.pdf) | 四頁原始分析，內容不隨重構自動更新 |
 | **OpenSpec 前 README 快照** | [README_BEFORE.md](docs/baseline/README_BEFORE.md) | 保留早期提交版本，供比對 |
 
-本次**不修改**以上原始來源。課堂系統已交的圖檔不必假定也須重複存入 GitHub；iLearning 正式規格未在本 Repo 獨立核驗。
+本次**不修改**以上原始來源；DOCX、PPTX 都是原始提案階段材料，內容若與後續 `DESIGN.md` 記錄的 Phase 2/2.5 進度不同，應以文件版本與時間區分，而非直接視為同一階段的結論。課堂系統已交的圖檔不必假定也須重複存入 GitHub；iLearning 正式規格未在本 Repo 獨立核驗。
 
 ## 3. 研究內容摘要與已知限制
 
