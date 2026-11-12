@@ -2,6 +2,13 @@
 
 > **Document refactor delivered through ChatGPT–GitHub Connector.** OpenSpec **spec-driven file structure** was authored and reviewed; **OpenSpec CLI commands were not executed**, and prediction experiments remain unrun. This is not a claim of native CLI validation, nor of completed New Taipei model evaluation.
 
+### Newly added source materials — 2026-11-13
+
+- [Uploaded original DESIGN.md](DESIGN.md) — supplied **after** the initial OpenSpec refactor; its primary deployed scope is the **Taichung information-only Agent**, while New Taipei is used for historical offline forecasting research. The design itself reports New Taipei phase-2 Persistence MAE **0.326757** as the strongest overall baseline, while New Taipei production inference and Taichung future predictions are **not validated/enabled**. Those figures have **not been independently reproduced in this repository**.
+- [智慧停車提案解析.pdf](docs/submission/智慧停車提案解析.pdf) — original four-page proposal-analysis PDF provided for class submission.
+- [Source scope reconciliation](docs/refactor/SOURCE_SCOPE_RECONCILIATION.md) — explains how the uploaded design relates to the previously New Taipei-oriented research proposal.
+- Previously authored Introduction/Related Work are **proposal-oriented drafts derived from the old README**, not a verified rewrite of the newly supplied DESIGN.md. The new design creates a source alignment follow-up; do not present them as fully reconciled without a separate revision.
+
 ### Reviewer / instructor navigation
 
 | Deliverable | GitHub file | Status |
@@ -19,7 +26,7 @@
 | Before / After mapping | [BEFORE_AFTER.md](docs/refactor/BEFORE_AFTER.md) | README-based comparison |
 | Acceptance and outstanding blockers | [ACCEPTANCE.md](docs/refactor/ACCEPTANCE.md) | Manual documentary audit; CLI NOT RUN |
 
-**Scope restriction:** The original DOCX/PPTX, standalone DESIGN.md, datasets and notebooks are **not present in this GitHub repository**, so their exact pre/post comparison and experiment reproducibility are still blocked. The originally submitted PDF/PNG are separate LMS attachments; no requirement to duplicate them in this repository has been established. The remainder of this README preserves the previous proposal outline.
+**Scope restriction:** Original DOCX/PPTX, raw datasets and notebooks are **not present in this GitHub repository**; a standalone DESIGN.md was added later, after the initial document refactor, so their exact pre/post comparison and experiment reproducibility are still blocked. The originally submitted PDF/PNG are separate LMS attachments; no requirement to duplicate them in this repository has been established. The remainder of this README preserves the previous proposal outline.
 
 ---
 

@@ -3,7 +3,8 @@
 ## 1. Source baseline
 - [x] 1.1 Inventory GitHub at initial commit `f060df0569667769c9053b7affe87265cfeb415f`.
 - [x] 1.2 Preserve verbatim pre-refactor `README.md` in `docs/baseline/README_BEFORE.md`.
-- [ ] 1.3 Obtain original DOCX/PPTX and standalone DESIGN.md in the repository for full original-artifact comparison (**BLOCKED: not available**).
+- [x] 1.3 Commit user-provided standalone DESIGN.md and proposal-analysis PDF, preserving them without rewriting.
+- [ ] 1.4 Obtain original DOCX/PPTX, and perform full new DESIGN.md versus refactored academic sections comparison (**PARTIAL/BLOCKED**).
 
 ## 2. OpenSpec plan
 - [x] 2.1 Write proposal, measurable specs, document design and task list.
@@ -14,7 +15,7 @@
 - [x] 3.2 Write refactored Introduction with evidence boundaries and falsifiable H1–H3.
 - [x] 3.3 Write critical Related Work and selected-publication comparison table.
 - [x] 3.4 Write bilingual abstracts and remove unsupported claim of demonstrated feasibility.
-- [ ] 3.5 Reconcile the refactored text with the **full original** DOCX/PPTX/DESIGN.md (**BLOCKED**).
+- [ ] 3.5 Reconcile the refactored text with the **newly provided original DESIGN.md** and the still-missing original DOCX/PPTX (**PARTIAL/BLOCKED**).
 
 ## 4. Evidence and acceptance
 - [x] 4.1 Create limited paper DOI/source audit and flag unresolved citations.
@@ -28,3 +29,9 @@
 - [ ] 5.2 Run New Taipei full-data experiments and H1–H3 (**NOT RUN**).
 - [ ] 5.3 Verify formal LMS submission requirements (**PENDING source**).
 - [ ] 5.4 Complete full metadata / full-text audit of every cited research article (**PARTIAL**).
+
+## 6. Subsequent source additions
+- [x] 6.1 Add user's original DESIGN.md, without altering its contents.
+- [x] 6.2 Add user's original proposal-analysis PDF binary, SHA-256 `f8d883960ae8fd903e57bd037bf6cff55c1cb253e331ec6334cf0c9fdc550a12`.
+- [x] 6.3 Create scope reconciliation note and update reviewer links.
+- [ ] 6.4 Perform a future academic refactor specifically grounded in the newly uploaded DESIGN.md, after confirming Taichung/New Taipei research-scope framing.

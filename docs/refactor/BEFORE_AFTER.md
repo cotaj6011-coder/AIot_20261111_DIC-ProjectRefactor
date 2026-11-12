@@ -1,6 +1,6 @@
 # Before / After Refactor Traceability
 
-**Baseline commit:** `f060df0569667769c9053b7affe87265cfeb415f`. A full textual snapshot of root `README.md` is at [README_BEFORE.md](../baseline/README_BEFORE.md). This document describes the specific **README-derived** refactor; it does NOT pretend that the original DOCX/PPTX or standalone DESIGN.md were available in the repository.
+**Baseline commit:** `f060df0569667769c9053b7affe87265cfeb415f`. A full textual snapshot of root `README.md` is at [README_BEFORE.md](../baseline/README_BEFORE.md). This document describes the specific **README-derived** refactor; it does NOT pretend that the original DOCX/PPTX or standalone DESIGN.md were available **when the initial refactor was performed**. A DESIGN.md was provided and committed later; see [SOURCE_SCOPE_RECONCILIATION.md](SOURCE_SCOPE_RECONCILIATION.md).
 
 | Starting README | Observed content / risk | Refactored destination | Change rationale |
 | --- | --- | --- | --- |
@@ -26,9 +26,15 @@
 
 ## Still missing for a full original-design diff
 
-1. Source `DESIGN.md` and original DOCX/PPTX from the initial final project.
+1. Source `DESIGN.md` is now available **after** the refactor, but a full content reconciliation and a corresponding refactored DESIGN version have not been produced. Original DOCX/PPTX remain unavailable.
 2. Full original Related Work nine-paper bibliography/table and original Introduction exact text.
 3. Actual New Taipei data and notebook / validation reports.
 4. Formal LMS written submission requirements and any required filenames.
 
 **Judgment:** README-based refactor evidence is available; original-DESIGN.md before/after proof remains **BLOCKED**.
+
+## Post-refactor source additions
+
+- [Original supplied DESIGN.md](../../DESIGN.md) was committed after the README-based refactor; it must be treated as a new source baseline, not silently substituted for the original README source.
+- [智慧停車提案解析.pdf](../submission/智慧停車提案解析.pdf) was included as the original 4-page PDF attachment.
+- [Scope reconciliation](SOURCE_SCOPE_RECONCILIATION.md) identifies Taichung-vs-New Taipei differences and the need for a follow-up design-aligned revision.
