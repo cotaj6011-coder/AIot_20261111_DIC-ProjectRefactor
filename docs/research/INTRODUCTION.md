@@ -10,7 +10,7 @@ At the moment of a parking inquiry, an application may display vacant roadside s
 
 Established work includes broad surveys of urban parking prediction [5], spatiotemporal dynamic-graph forecasting of on-street availability [6], and multi-view curb-occupancy models [7]. A usable arrival-time decision workflow must also consider observation provenance, occupancy risk, practical walking constraints and a defensible way to decline recommendations when reliable inputs are absent.
 
-SFpark provides an **external policy and parking-management** example: its pilot evaluation reported up to 43% less reported search time and approximately 30% reductions in circling-related vehicle mileage and greenhouse-gas emissions [S1]. These outcomes include demand-responsive pricing and other interventions; they are **not** measured effects of this proposed Agent.
+SFpark provides a **direct external search-cost example**: reported search time in its pilot areas fell from **11 minutes 36 seconds to 6 minutes 36 seconds (43%)**, compared with **13%** in control areas, for weekdays 09:00–18:00 [S1]. This motivates measuring search-related decision usefulness. It does not measure New Taipei search time or isolate an AI effect: the program combined parking information, demand-responsive pricing and other management changes. Cao et al. [6] additionally examine how inaccurate predictive information can direct drivers toward already occupied spaces and extend searching. The project therefore asks whether arrival-time evidence can improve decisions, not whether an externally observed percentage can be transferred to this Agent.
 
 ## B. Problem definition
 
@@ -30,7 +30,13 @@ Three gaps are relevant but must not be conflated:
 
 The resulting contribution, if supported by empirical tests, would be an **auditable combination** of horizon-matched forecasting, freshness/uncertainty safeguards and failure-aware recommendations **in this application setting**, not a blanket first-in-literature claim.
 
-## D. Research questions and hypotheses
+## D. Concrete method and operational workflow
+
+The proposed implementation has **three method groups**, matching [AGENT_WORKFLOW.md](AGENT_WORKFLOW.md). **Context and data acquisition:** a Planner selects HTTP JSON connectors or historical JSONL readers, followed by schema, timestamp, missingness and capacity checks. **Temporal prediction and risk analysis:** past-only lag/rolling features feed Persistence, same-weekday/time Historical Median, Random Forest or HistGradientBoosting; Isotonic/Platt scaling are proposed calibration candidates, and fullness probabilities require validated labels and calibration. **Decision and autonomous orchestration:** explicit parking/walking constraints precede distance, calibrated-fullness-risk and candidate-quality ranking; a Tool Registry and Planner coordinate bounded retry, replanning, evidence logging and abstention. GIS presentation is concretely identified as React/TypeScript/Leaflet with FastAPI, following the **separate source-reported Taichung prototype** in DESIGN.md §§12–13; this is not evidence of a completed New Taipei integration. Haversine distance is an estimate, not a routed walking distance.
+
+The operational sequence, failure branches and tool responsibilities are defined in [AGENT_WORKFLOW.md](AGENT_WORKFLOW.md). The proposed Agent automatically collects data, analyzes evidence and takes recommendation/replanning actions; the interface displays the resulting decisions. Its advantage over a fixed pipeline remains subject to H3 testing.
+
+## E. Research questions and hypotheses
 
 **H1 — Prediction superiority.** Under matched +30/+60-minute forecasting targets, and a leakage-controlled chronological split, do Random Forest or HistGradientBoosting features improve MAE by the prespecified minimum over Persistence? The `DESIGN.md` §10 **reports the opposite on aggregate New Taipei offline test rows** (Persistence MAE 0.326757 versus RF 0.402669, HistGB 0.537539; same 9,178,935 test rows). This **does not support H1's superiority claim on the source-reported aggregate comparison**; H1 must not be called validated or passed. The dataset/run is not independently reproduced in this repository. Horizon/segment/subgroup results should be examined without cherry-picking.
 
@@ -38,7 +44,7 @@ The resulting contribution, if supported by empirical tests, would be an **audit
 
 **H3 — Failure-aware planning.** With identical source access and fault cases (timeout, stale observations, schema errors), does a quality-aware Agent reduce recommendations lacking adequate evidence relative to a fixed pipeline, while maintaining meaningful coverage and reasonable latency? Compare conditional error rate, number of supported recommendations, abstention and p95 latency. **Not evaluated here.**
 
-## E. Source-reported stages versus proposed tests
+## F. Source-reported stages versus proposed tests
 
 | Stage | City / unit | Source says | What this repository can verify |
 | --- | --- | --- | --- |
@@ -52,7 +58,7 @@ Evaluation **will** use a chronological 60/20/20 scheme with **purging of traini
 
 Performance goals (MAE improvement ≥5%, full-recall ≥0.80, Top-3 success improvement ≥5 percentage points, p95 latency ≤3 s) in original DOCX §6.6 are **prospective go/no-go targets**, not achieved findings. If Persistence remains best, a scientifically valid outcome is to select it and report H1 as unsupported on the given evaluation.
 
-## F. Intended contributions and limitations
+## G. Intended contributions and limitations
 
 1. An operational definition of roadside **arrival-time decision usefulness**, aligned with target times and parking constraints.
 2. A planned evidence-aware recommendation contract tracking source freshness, candidate quality, risk representation and explicit abstention.
@@ -63,4 +69,4 @@ Performance goals (MAE improvement ≥5%, full-recall ≥0.80, Top-3 success imp
 
 ## References
 
-Numeric references [5]–[13] and [S1] align with the original DOCX source numbering; bibliographic verification and direct publisher links are in [REFERENCE_AUDIT.md](../references/REFERENCE_AUDIT.md).
+Numeric references [5]–[13] preserve the original DOCX numbering; [S1] is supplemental external-case evidence. Bibliographic verification and direct publisher links are in [REFERENCE_AUDIT.md](../references/REFERENCE_AUDIT.md).

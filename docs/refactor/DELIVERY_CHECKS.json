@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-19",
+  "local_document_links": "PASS",
+  "abstract_chars": 307,
+  "af_sections": 6,
+  "readme_image_first": "PASS",
+  "lms_html_image_first": "PASS",
+  "unchanged_originals": "PASS",
+  "png_dimensions": [
+    1491,
+    1055
+  ],
+  "native_openspec": "PASS - see OPENSPEC_CLI_VALIDATION.json",
+  "changed_markdown_files": [
+    "README.md",
+    "OPENSPEC_SETUP.md",
+    "docs/assets/INFOGRAPHIC_PROMPT.md",
+    "docs/refactor/ACCEPTANCE.md",
+    "docs/refactor/BEFORE_AFTER.md",
+    "docs/refactor/CLASS_FEEDBACK_20261118.md",
+    "docs/refactor/OPENSPEC_CLI_VERIFICATION.md",
+    "docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md",
+    "docs/references/REFERENCE_AUDIT.md",
+    "docs/research/ABSTRACTS.md",
+    "docs/research/AGENT_WORKFLOW.md",
+    "docs/research/INTRODUCTION.md",
+    "docs/research/RELATED_WORK.md",
+    "docs/research/RESEARCH_5_3_10.md",
+    "openspec/changes/refactor-smart-parking-proposal/design.md",
+    "openspec/changes/refactor-smart-parking-proposal/proposal.md",
+    "openspec/changes/refactor-smart-parking-proposal/tasks.md"
+  ]
+}

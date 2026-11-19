@@ -12,7 +12,7 @@ These sources strengthen the case for Persistence and same-weekday/time Historic
 
 ## B. Spatiotemporal and cross-region models
 
-Cao, Chen and Wang [6] present an attention-based dynamic graph model for **on-street parking availability**, combining different graph representations with external information. Qian *et al.* [7] address **curb parking occupancy** through multi-view graph attention and recurrent fusion using geography, accessibility and POI signals. These works demonstrate that spatial interactions and domain context are already established research themes; the project cannot claim they are novel in general.
+Cao, Chen and Wang [6] present an attention-based dynamic graph model for **on-street parking availability**, combining different graph representations with external information. Qian *et al.* [7] address **curb parking occupancy** through multi-view graph attention and recurrent fusion using geography, accessibility and POI signals. Cao et al. also simulate the search consequences of inaccurate predictive information, including directing drivers to already occupied spaces. This supports connecting prediction quality to the query-to-arrival decision problem; it does not demonstrate this project's arrival-time benefit. Spatial interactions, domain context and downstream search evaluation are established themes; the project cannot claim they are novel in general.
 
 Vakrinou, Mantouka and Vlahogianni [9] study **four off-street garages in Athens** using multi-source input. Their findings distinguish favorable short- versus longer-horizon sequence architectures; however, garage counts, data ownership and access patterns do **not** translate automatically to road-segment outcomes. The original DOCX correctly excludes off-street integration from the first New Taipei validation scope. Likewise, Kuang *et al.* [10] apply deep meta-learning to heterogeneous regional parking prediction, which is a plausible later transfer-learning comparator but not evidence of New Taipei transfer without explicit domain shift tests.
 
@@ -42,7 +42,7 @@ The UCI Parking Birmingham dataset [13] is a public **off-street facility** data
 | [12] | Piccialli *et al.* (2025) | Caserta multi-source digital twin and forecasting | Integration plus operational context | No demonstration of this specific arrival-time Agent |
 | [13] | Stolfi (UCI cited 2017) | Birmingham parking-garage observations (donated 2019) | QA and irregular sampling tests | Geographic/roadside and modern transportability limits |
 
-**External policy example, not part of original DOCX [5]–[13]:** SFMTA SFpark evaluation [S1] describes benefits of parking availability/pricing operations. It does not establish any result for this project or isolate an AI Agent's effect.
+**External search-cost evidence, not part of original DOCX [5]–[13]:** SFMTA SFpark evaluation [S1] reports weekday 09:00–18:00 search times of 11:36 before versus 6:36 after in pilot areas (−43%); control areas decreased 13%. This directly motivates search-cost measurement, while remaining an external information/pricing program rather than a New Taipei forecast experiment or an isolated AI effect.
 
 ## F. Research positioning and remaining evidence gap
 

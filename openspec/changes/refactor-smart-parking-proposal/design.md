@@ -27,7 +27,7 @@ Original DOCX / PPTX / DESIGN.md / PDF / README baseline
 5. **Make H2/H3 testable.** Compare risk-aware Top-3 against distance-only under matched coverage and walking limits; compare Agent and fixed Pipeline using identical tools, faults, recommendation evidence, abstention and latency.
 6. **Avoid overclaiming novelty.** Prior work already includes spatial, Bayesian uncertainty and integrated urban parking decision approaches.
 7. **Separate cities.** New Taipei research hypotheses cannot be validated by Taichung's existing current-information Agent.
-8. **Distinguish validation modes.** Manual document checks are reported as documentary PASS. Native `openspec validate` is **NOT RUN**.
+8. **Distinguish validation modes.** Manual document checks are reported separately from native CLI validation. OpenSpec 2.1.0 strict validation is **PASS** with its actual command and JSON output in the [CLI record](../../../docs/refactor/OPENSPEC_CLI_VERIFICATION.md); this does not validate model performance.
 
 ## Artifacts and review
 
@@ -42,4 +42,5 @@ Original DOCX / PPTX / DESIGN.md / PDF / README baseline
 | [OPENSPEC_MANUAL_VERIFICATION.md](../../../docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md) | Per-Requirement/Scenario evidence |
 | [ACCEPTANCE.md](../../../docs/refactor/ACCEPTANCE.md) | Scope-aware documentary acceptance |
 
-**Validation boundary:** No CLI or model execution is implied by this document.
+**Validation boundary:** CLI execution is supported only by the linked record. No model execution or LMS submission is implied by this document.
+

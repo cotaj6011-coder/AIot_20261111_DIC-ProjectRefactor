@@ -7,16 +7,20 @@
 - `.agents/skills/` 及 `.github/skills/`：供支援的 Agent 工具使用的 OpenSpec Skills。
 - [人工規格驗收](docs/refactor/OPENSPEC_MANUAL_VERIFICATION.md)：逐項 Requirement／Scenario 文件證據。
 
-## 驗證方式
+## 本次安裝與驗證
 
-**目前採文件人工驗收**，未執行原生 `openspec validate`，因此不能宣稱 CLI PASS。需要原生驗證時，可在另有 OpenSpec CLI 的環境，依官方文件使用：
+2026-11-19 已在本專案 `.tools/openspec-2.1.0/` 安裝官方 **Windows x64 standalone OpenSpec 2.1.0**，並核對官方 `SHA256SUMS`。此安裝不需要 npm，也未修改系統 PATH；工具執行檔僅供本機使用，不屬繳交附件。官方安裝方式見 [Installation](https://openspec.dev/docs/installation)，固定版本見 [v2.1.0 release](https://github.com/Fission-AI/OpenSpec/releases/tag/v2.1.0)。
+
+在專案根目錄實際執行：
 
 ```powershell
-openspec --version
-openspec list
-openspec validate refactor-smart-parking-proposal
+& '.\.tools\openspec-2.1.0\openspec.exe' --version
+& '.\.tools\openspec-2.1.0\openspec.exe' list
+& '.\.tools\openspec-2.1.0\openspec.exe' status --change refactor-smart-parking-proposal --json
+& '.\.tools\openspec-2.1.0\openspec.exe' validate refactor-smart-parking-proposal --strict --no-interactive --json
 ```
 
-執行版本及可用參數需以當時官方 CLI 說明為準。此處列出建議命令，**不是本儲存庫已執行的紀錄**。
+**結果：原生 CLI 嚴格驗證 PASS，1 項 change 通過、0 項失敗、0 個 issue，exit code 0。** 四個規劃文件（proposal、specs、design、tasks）皆可由 CLI 辨識。詳見 [執行紀錄](docs/refactor/OPENSPEC_CLI_VERIFICATION.md) 與 [原始 JSON](docs/refactor/OPENSPEC_CLI_VALIDATION.json)。
 
-OpenSpec 官方文件：https://openspec.dev/
+CLI PASS 檢查的是 OpenSpec 文件結構與規格格式；人工文件驗收另列，兩者均不代表 H1–H3 實驗完成或 iLearning 已繳交。
+

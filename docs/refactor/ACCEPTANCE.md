@@ -4,7 +4,7 @@
 
 本報告依原始 [DOCX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.docx)、[PPTX](../submission/智慧停車AI_Agent_Proposal_新北市%281%29.pptx)、[PDF](../submission/智慧停車提案解析.pdf)、[DESIGN.md](../../DESIGN.md) 與 OpenSpec 規格，檢查研究提案重構文件的完整性和一致性。
 
-**結果：文件層級人工驗收 PASS（9/9 Requirements 具對應證據）。** 詳細逐項驗證方法與文件位置列於 [OPENSPEC_MANUAL_VERIFICATION.md](OPENSPEC_MANUAL_VERIFICATION.md)。此結果不代表原生 CLI 或模型實驗通過。
+**結果：文件層級人工驗收 PASS（9/9 Requirements 具對應證據）；原生 OpenSpec 2.1.0 嚴格驗證 PASS。** 逐項文件證據列於 [OPENSPEC_MANUAL_VERIFICATION.md](OPENSPEC_MANUAL_VERIFICATION.md)，CLI 命令與輸出另列於 [OPENSPEC_CLI_VERIFICATION.md](OPENSPEC_CLI_VERIFICATION.md)。兩者均不代表模型實驗通過。
 
 ## 作業交付驗收
 
@@ -18,10 +18,11 @@
 | Related Work 原稿九篇 [5]–[13] | **PASS（書目／研究主題對照）** | [RELATED_WORK](../research/RELATED_WORK.md) · [REFERENCE_AUDIT](../references/REFERENCE_AUDIT.md) |
 | 原稿 Before／After、城市範圍 | **PASS（章節級）** | [BEFORE_AFTER](BEFORE_AFTER.md) · [SOURCE_SCOPE](SOURCE_SCOPE_RECONCILIATION.md) |
 | Spec Requirement／Scenario 人工驗證 | **PASS（9/9 文件情境）** | [MANUAL VERIFICATION](OPENSPEC_MANUAL_VERIFICATION.md) |
-| 原生 `openspec validate` | **NOT RUN** | 無官方 CLI 執行紀錄 |
+| 原生 `openspec validate --strict` | **PASS** | OpenSpec 2.1.0；1 passed、0 failed、0 issues；[CLI 紀錄](OPENSPEC_CLI_VERIFICATION.md) · [JSON](OPENSPEC_CLI_VALIDATION.json) |
 | H1 purged-split 模型實驗 | **PARTIAL／BLOCKED** | `DESIGN.md` 有離線報告數值，缺本 Repo 可重現的完整資料與執行紀錄 |
 | H2 Top-3 與 H3 Agent-vs-Pipeline | **PLANNED／NOT RUN** | 僅有研究設計與評估方案 |
-| 課程平台正式繳交驗證 | **BLOCKED** | 無課程平台提交狀態證據 |
+| 資訊圖表與作業正文 | **PASS（草稿）** | 新圖 1491×1055；iLearning 已儲存修訂稿並確認圖表置頂、圖片完整載入；本機 README 同步置頂 |
+| 課程平台正式繳交驗證 | **PENDING** | 2026-11-19 已查核作業要求並儲存草稿；正式繳交以平台狀態另行確認 |
 
 ## 研究可信度檢核
 
@@ -33,9 +34,9 @@
 
 ## 待完成的真實事項
 
-1. 執行原生 OpenSpec CLI（**NOT RUN**；僅當正式作業需要 CLI 證據時）。
-2. 提供新北 Phase 2 資料與執行紀錄，修正跨切分標籤問題並重跑 H1。
-3. 實測 H2 的風險校準／抵達 Top-3 成效與 H3 的故障注入比較。
-4. 依 iLearning 實際規範確認正式繳交狀態。
+1. 提供新北 Phase 2 資料與執行紀錄，修正跨切分標籤問題並重跑 H1。
+2. 實測 H2 的風險校準／抵達 Top-3 成效與 H3 的故障注入比較。
+3. 依 iLearning 實際規範確認正式繳交狀態。
 
-**文件驗收結果：PASS；研究實驗及 CLI 驗證不在此 PASS 範圍。**
+**文件與 CLI 驗收結果：PASS；研究實驗及正式繳交不在此 PASS 範圍。**
+

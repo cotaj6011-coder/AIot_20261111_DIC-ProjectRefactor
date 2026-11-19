@@ -7,7 +7,7 @@
 | DOCX | Source (publisher bibliographic record) | Verification and supported topic | Limitations |
 | --- | --- | --- | --- |
 | **[5]** | **C. Ma, X. Huang, J. Li**, “A review of research on urban parking prediction,” *Journal of Traffic and Transportation Engineering (English Edition)* **11**(4), 700–720 (2024). https://doi.org/10.1016/j.jtte.2023.11.004 | **PASS metadata / abstract**: review of prediction approaches and research directions; [Publisher](https://www.sciencedirect.com/science/article/pii/S2095756424000710) | Review is not a New Taipei experiment. |
-| **[6]** | **R. Cao, H. Chen, D. Z. W. Wang**, “An attention-based dynamic graph model for on-street parking availability prediction,” *Transportation Research Part A* **193**, 104391 (2025). https://doi.org/10.1016/j.tra.2025.104391 | **PASS metadata / abstract**: attention-based static/dynamic/hidden graph forecasting; [Publisher](https://www.sciencedirect.com/science/article/pii/S0965856425000199) | No claim of this project's performance advantage. |
+| **[6]** | **R. Cao, H. Chen, D. Z. W. Wang**, “An attention-based dynamic graph model for on-street parking availability prediction,” *Transportation Research Part A* **193**, 104391 (2025). https://doi.org/10.1016/j.tra.2025.104391 | **PASS metadata / abstract; 2026-11-19 publisher-preview recheck**: static/dynamic/hidden graph forecasting plus simulation of inaccurate predictive information extending parking search; [Publisher preview](https://www.sciencedirect.com/science/article/abs/pii/S0965856425000199) | No claim of this project's performance advantage. |
 | **[7]** | **C. Qian, K. Yang, J. He, X. Peng, H. Huang**, “Curb parking occupancy prediction based on real-time fusion of multi-view spatial-temporal information using graph attention gated networks,” *Applied Soft Computing* **171**, 112781 (2025). https://doi.org/10.1016/j.asoc.2025.112781 | **PASS metadata / abstract**: curb multi-view graph-attention recurrent fusion; [Publisher](https://www.sciencedirect.com/science/article/pii/S1568494625000924) | Effects in paper cannot be imported as New Taipei results. |
 | **[8]** | **M. Schneble, G. Kauermann**, “Statistical modelling of on-street parking spot occupancy in smart cities,” *Journal of the Royal Statistical Society Series C* **74**(4), 1128–1149 (2025). https://doi.org/10.1093/jrsssc/qlaf017 | **PASS metadata / abstract**: time-to-event / semi-Markov modeling of Melbourne on-street spot occupancy; [Publisher](https://academic.oup.com/jrsssc/article/74/4/1128/8046921) | Spot-level duration ≠ segment-level available-space count. |
 | **[9]** | **K. Vakrinou, E. G. Mantouka, E. I. Vlahogianni**, “Leveraging multisource data for off-street parking occupancy prediction: a twofold analysis,” *International Journal of Transportation Science and Technology* **21**, 352–371 (2026; DOI registered 2025). https://doi.org/10.1016/j.ijtst.2025.02.005 | **PASS DOI / title / venue / volume / abstract**: Athens four-garage off-street occupancy, LSTM/Transformer, horizon dependence and SHAP; [Publisher](https://www.sciencedirect.com/science/article/pii/S204604302500036X) | Off-street results and small facility count; cannot claim road-segment validity. |
@@ -20,7 +20,17 @@
 
 ## Supplemental outside-case evidence (NOT part of original [5]–[13])
 
-**[S1]** SFMTA, *SFpark Pilot Evaluation* and its 2014 press release: [Official evaluation page](https://www.sfmta.com/getting-around/drive-park/demand-responsive-pricing/sfpark-evaluation), [Official press summary](https://www.sfmta.com/press-releases/sfpark-evaluation-shows-parking-easier-cheaper-pilot-areas). **PASS source identified**: reported search-time drop up to **43%** and approximately **30%** lower circling-related VMT/GHG in evaluated pilot areas. SFpark involved demand-responsive prices and other management changes. **Do not use these external policy effects as achieved AI Agent outcomes, nor as single-component causal attribution.**
+**[S1]** SFMTA, *SFpark Pilot Project Evaluation Summary* (2014), printed pp. 12–13 (PDF page 7). [Official evaluation page](https://www.sfmta.com/getting-around/drive-park/demand-responsive-pricing/sfpark-evaluation), [Official summary PDF](https://www.sfmta.com/media/11985/download?inline=). **Rechecked 2026-11-19 against the official summary:**
+
+| Quantity | Pilot | Control | Interpretation |
+| --- | --- | --- | --- |
+| Reported parking-search time, weekdays 09:00–18:00 | 11:36 → 6:36; **−5 min / −43%** | 6:24 → 5:36; **−13%** | Direct external evidence of search cost; percentages are within-area before/after changes, not an isolated AI treatment effect. |
+| Circling-related vehicle miles per day | 8,134 → 5,721; **−30%** | 3,110 → 2,933; **−6%** | External parking-management outcome; not this Agent's result. |
+| Search-related greenhouse gases, metric tons per day | 7.0 → 4.9; **−30%** | 2.7 → 2.5; **−6%** | Rounded official figures; not all citywide transport emissions. |
+
+SFpark combined information, demand-responsive pricing and other parking-management changes. The short abstract and infographic use the search-time figures for motivation; they **do not establish New Taipei baseline search time, a future Agent improvement target, or causal attribution to one component**. The 2014 case is identified as historical evidence, not presented as a new 2026 study.
+
+**[6] Direct problem-link check (2026-11-19):** The publisher abstract and section preview describe simulation of prediction accuracy and parking searching; the preview explains that erroneous information can send a driver to an occupied space and prolong search. This supports the A→B link between search cost and unreliable arrival decisions. Only the accessible abstract/preview was checked; a full-text replication is not claimed. No effect size from this paper is imported into the project.
 
 ## Project claims versus citations
 
@@ -38,3 +48,4 @@
 2. Existing claims about API schema/license, field-level occupancy codes, original project test results and raw dataset quantities are **source assertions**, not data audits performed by the GitHub connector.
 3. Specific DOI records verified above come from current publisher / official data site pages. The formal LMS marking scheme and grading thresholds cannot be verified from these publications.
 4. SFpark external outcomes are contextual evidence only.
+

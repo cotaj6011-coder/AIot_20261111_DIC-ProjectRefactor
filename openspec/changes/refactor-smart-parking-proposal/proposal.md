@@ -11,7 +11,7 @@ The DIC3 project requires a specification-driven, source-traceable academic revi
 - Compare all original references [5]–[13] with source-supported methodological boundaries.
 - Separate New Taipei roadside arrival-time research, New Taipei Phase 2 offline results and Taichung information-only Agent.
 - Define falsifiable H1–H3 and time-safe evaluation protocols, distinguishing source-reported results from verified experiments.
-- Publish Before/After evidence, manual scenario verification and acceptance status.
+- Publish Before/After evidence, manual scenario verification, native CLI validation evidence and acceptance status.
 
 ## Capabilities
 
@@ -37,4 +37,5 @@ Changes apply to documentation, OpenSpec specifications, research summaries and 
 - All nine documentary Requirement/Scenario checks have traceable source evidence.
 - A–F and 5/3/10 are complete, and Introduction/Related Work are academic and source-aligned.
 - H1, H2 and H3 claims use appropriate evidence states; New Taipei and Taichung outcomes are not conflated.
-- Manual validation is accurately labeled, with native OpenSpec CLI and unrun experiments excluded from PASS claims.
+- Manual document validation and native OpenSpec CLI validation are separately evidenced; unrun research experiments remain excluded from PASS claims.
+

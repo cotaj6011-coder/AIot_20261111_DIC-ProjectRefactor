@@ -6,12 +6,14 @@
 
 | A–F | Research statement | Status |
 | --- | --- | --- |
-| **A — Attention Getter** | A free parking space at query time may be occupied upon arrival | Motivation |
+| **A — Attention Getter** | SFpark external search-cost evidence: reported 11:36 → 6:36 (−43%; control −13%); query-time vacancy may disappear before arrival [S1] | External motivation, not this Agent's result |
 | **B — But / Gap** | Demand changes, delayed observations and source errors make simple current-state recommendations unreliable | Problem |
 | **C — Cure** | Quality-gated, evidence-aware arrival-time Top-k risk recommendation with explicit abstention | Proposed New Taipei service |
-| **D — Development** | New Taipei JSONL, proposed API, past-only features, Persistence/statistical/tree models, planner/Retry/Replan/HITL | Method design; separate Taichung information-only prototype described in DESIGN |
+| **D — Development** | Three groups: context/data acquisition (HTTP JSON/JSONL + quality); temporal prediction/risk analysis (named baselines/tree models + calibration); decision/autonomous orchestration (rules ranking + Retry/Replan/Abstain) | Method design; separate Taichung information-only prototype described in DESIGN |
 | **E — Experiments** | Matched/chronological/purged model tests, calibration, arrival Top-k utility and Agent-vs-fixed-pipeline faults | New Taipei Phase 2 offline test source-reported, H2/H3 pending |
 | **F — Findings / limitations** | Early sample MAE ≈7.12; later offline Persistence 0.326757 vs RF 0.402669 / HistGB 0.537539 (source-reported); no production-ready model, purged test, H2/H3 | Distinct stages, neither rerun in repo |
+
+**完整論述與精簡摘要：**見 [ABSTRACTS.md](ABSTRACTS.md)。A 的 43% 是 SFpark 整體資訊／定價案例，不是新北或本 Agent 成效；A→B→C 依序連接尋位成本、抵達資訊不可靠與自動取數／分析／決策。三類方法統一為「情境與資料取得、時間預測與風險分析、決策與自主調度」，具體工具與流程見 [AGENT_WORKFLOW.md](AGENT_WORKFLOW.md)。[S1 官方評估摘要](https://www.sfmta.com/media/11985/download?inline=)
 
 ## 1. Five Mindsets（五大思維）
 
@@ -45,3 +47,4 @@
 ## Integrity statement
 
 **Five** mindsets, **three** controversies, **ten** questions. The research is **not yet** a demonstrated New Taipei production service. DESIGN.md §§10–11 gives source-reported offline metrics and conditional trust; §§12–15 documents Taichung current-information Agent whose future prediction is disabled. Evidence state and per-city coverage are documented in [SOURCE_SCOPE_RECONCILIATION](../refactor/SOURCE_SCOPE_RECONCILIATION.md).
+
